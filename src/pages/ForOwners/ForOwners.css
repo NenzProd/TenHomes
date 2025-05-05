@@ -1,0 +1,222 @@
+/* 
+* ==============================================
+* FOR OWNERS PAGE STYLES
+* ==============================================
+*/
+
+.for-owners-page {
+  background-color: #fdf6e3;
+}
+
+/* 
+* ==============================================
+* PAGE HEADER STYLES
+* ==============================================
+*/
+.page-header {
+  background-color: #ffe5d0;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 52px; /* Increased from 48px */
+  color: #c75c4a;
+  margin: 0;
+}
+
+/* 
+* ==============================================
+* CONTENT SECTION STYLES
+* ==============================================
+*/
+.owners-content {
+  padding: 60px 40px;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 
+* ==============================================
+* BENEFITS SECTION STYLES
+* ==============================================
+*/
+.benefits-section {
+  margin-bottom: 60px;
+}
+
+.benefits-section h2 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 36px; /* Increased from 32px */
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.benefit-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.benefit-card h3 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 24px; /* Increased from 22px */
+  color: #c75c4a;
+  margin-bottom: 16px;
+}
+
+.benefit-card p {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 18px; /* Increased from 16px */
+  color: #444;
+  line-height: 1.5;
+}
+
+/* 
+* ==============================================
+* CTA BUTTON STYLES
+* ==============================================
+*/
+.cta-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.primary-cta {
+  background: #c75c4a;
+  color: #fff;
+  border: none;
+  padding: 16px 34px; /* Increased from 14px 32px */
+  font-size: 1.125rem; /* Increased from 1rem */
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.primary-cta:hover {
+  background: #a94432;
+}
+
+/* 
+* ==============================================
+* PROCESS SECTION STYLES
+* ==============================================
+*/
+.process-section {
+  margin-top: 60px;
+}
+
+.process-section h2 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 36px; /* Increased from 32px */
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.step-number {
+  background-color: #c75c4a;
+  color: white;
+  width: 44px; /* Increased from 40px */
+  height: 44px; /* Increased from 40px */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 22px; /* Increased from 20px */
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 22px; /* Increased from 20px */
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.step-content p {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 18px; /* Increased from 16px */
+  color: #444;
+  line-height: 1.5;
+}
+
+/* 
+* ==============================================
+* RESPONSIVE STYLES
+* ==============================================
+*/
+@media (max-width: 992px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .benefits-section h2,
+  .process-section h2 {
+    font-size: 32px; /* Increased from 28px */
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 40px 20px;
+  }
+  
+  .page-header h1 {
+    font-size: 40px; /* Increased from 36px */
+  }
+  
+  .owners-content {
+    padding: 40px 20px;
+  }
+  
+  .benefits-section h2,
+  .process-section h2 {
+    font-size: 28px; /* Properly adjusted */
+  }
+  
+  .benefit-card h3,
+  .step-content h3 {
+    font-size: 20px; /* Slightly increased for mobile */
+  }
+  
+  .benefit-card p,
+  .step-content p {
+    font-size: 16px; /* Still readable on mobile */
+  }
+}

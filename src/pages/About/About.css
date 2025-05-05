@@ -1,0 +1,91 @@
+/* 
+* ==============================================
+* ABOUT PAGE STYLES
+* ==============================================
+*/
+
+.about-page {
+  background-color: #fdf6e3;
+}
+
+/* 
+* ==============================================
+* PAGE HEADER STYLES
+* ==============================================
+*/
+.page-header {
+  background-color: #ffe5d0;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 52px; /* Increased from 48px */
+  color: #c75c4a;
+  margin: 0;
+}
+
+/* 
+* ==============================================
+* ABOUT CONTENT SECTION STYLES
+* ==============================================
+*/
+.about-content {
+  padding: 60px 40px;
+}
+
+.about-section {
+  margin-bottom: 40px;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 32px; /* Increased from 28px */
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.about-section p {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 18px; /* Increased from 16px */
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 800px;
+}
+
+/* 
+* ==============================================
+* RESPONSIVE STYLES
+* ==============================================
+*/
+@media (max-width: 768px) {
+  .page-header {
+    padding: 40px 20px;
+  }
+  
+  .page-header h1 {
+    font-size: 40px; /* Increased from 36px */
+  }
+  
+  .about-content {
+    padding: 40px 20px;
+  }
+  
+  .about-section h2 {
+    font-size: 28px; /* Increased from 24px */
+  }
+  
+  .about-section p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
