@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npx vite build",
+    "build": "node vercel-build.js",
+    "postinstall": "chmod +x ./node_modules/.bin/vite || true",
     "lint": "eslint .",
     "preview": "vite preview"
   },
