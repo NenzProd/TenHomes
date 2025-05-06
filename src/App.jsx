@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './component/Navbar/Navbar';
 import Footer from './component/Footer/Footer';
+import BottomNavBar from './component/BottomNavBar/BottomNavBar';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import ForOwners from './pages/ForOwners/ForOwners';
@@ -25,6 +26,7 @@ function App() {
         </main>
       </div>
       <Footer />
+      <BottomNavBar />
     </Router>
   );
 }
