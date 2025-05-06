@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './component/Navbar/Navbar';
+import Footer from './component/Footer/Footer';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import ForOwners from './pages/ForOwners/ForOwners';
@@ -23,6 +24,7 @@ function App() {
           </Routes>
         </main>
       </div>
+      <Footer />
     </Router>
   );
 }
