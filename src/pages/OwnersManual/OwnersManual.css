@@ -1,0 +1,227 @@
+.owners-manual {
+  padding: 3rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+.owners-manual-content {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.owners-manual-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #a84a3e, #CD5E4E);
+}
+
+.owners-manual h1 {
+  color: #a84a3e;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.owners-manual h2 {
+  color: #CD5E4E;
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.tagline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background-color: #CD5E4E;
+}
+
+.how-it-works {
+  margin: 3rem 0;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 5px solid #CD5E4E;
+}
+
+.how-it-works h3 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+}
+
+.how-it-works h3::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #CD5E4E;
+}
+
+.how-it-works ol {
+  counter-reset: step-counter;
+  padding-left: 0;
+}
+
+.how-it-works li {
+  margin-bottom: 2rem;
+  list-style: none;
+  position: relative;
+  padding: 0 0 0 65px;
+  min-height: 50px;
+}
+
+.how-it-works li:last-child {
+  margin-bottom: 0;
+}
+
+.how-it-works li::before {
+  content: counter(step-counter);
+  counter-increment: step-counter;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, #a84a3e, #CD5E4E);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.how-it-works strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.how-it-works ul {
+  padding-left: 0;
+  margin-top: 0.7rem;
+}
+
+.how-it-works ul li {
+  margin-bottom: 0.7rem;
+  padding-left: 25px;
+  position: relative;
+  min-height: initial;
+}
+
+.how-it-works ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  background: none;
+  color: #CD5E4E;
+  font-weight: bold;
+  box-shadow: none;
+  line-height: initial;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #f8ecea, #f0d5d3);
+  padding: 2rem;
+  margin-top: 3rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.cta-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #a84a3e;
+}
+
+.list-home-btn {
+  background: linear-gradient(135deg, #a84a3e, #CD5E4E);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(205, 94, 78, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.list-home-btn:hover {
+  background: linear-gradient(135deg, #974437, #bb5547);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(205, 94, 78, 0.4);
+}
+
+.list-home-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(205, 94, 78, 0.3);
+}
+
+@media (max-width: 768px) {
+  .owners-manual-content {
+    padding: 2rem;
+  }
+  
+  .how-it-works {
+    padding: 1.5rem;
+  }
+  
+  .owners-manual h1 {
+    font-size: 2rem;
+  }
+  
+  .owners-manual h2 {
+    font-size: 1.4rem;
+  }
+  
+  .tagline {
+    font-size: 1.1rem;
+  }
+  
+  .how-it-works li {
+    padding-left: 55px;
+  }
+  
+  .list-home-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}

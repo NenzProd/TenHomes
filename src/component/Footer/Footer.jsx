@@ -25,11 +25,11 @@ const Footer = () => (
           <li><Link to="/about">About us</Link></li>
           <li><Link to="/for-owners">For Owners - list your property</Link></li>
           <li><Link to="/for-tenants">For Tenants - Find your home</Link></li>
-          <li><a href="#">Owners Manual</a></li>
-          <li><a href="#">Tenants Manual</a></li>
-          <li><a href="#">Terms and Conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Payment Policy</a></li>
+          <li><Link to="/owners-manual">Owners Manual</Link></li>
+          <li><Link to="/tenants-manual">Tenants Manual</Link></li>
+          <li><Link to="#">Terms and Conditions</Link></li>
+          <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+          <li><Link to="#">Payment Policy</Link></li>
           <li><Link to="/contact">Contact us</Link></li>
         </ul>
       </div>
