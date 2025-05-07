@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
@@ -20,16 +21,16 @@ const Footer = () => (
       <div className="footer-col links">
         <div className="footer-title">Quick Links</div>
         <ul>
-          <li><a href="/home">Home</a></li>
-          <li><a href="/about">About us</a></li>
-          <li><a href="/for-owners">For Owners - list your property</a></li>
-          <li><a href="/for-tenants">For Tenants - Find your home</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About us</Link></li>
+          <li><Link to="/for-owners">For Owners - list your property</Link></li>
+          <li><Link to="/for-tenants">For Tenants - Find your home</Link></li>
           <li><a href="#">Owners Manual</a></li>
           <li><a href="#">Tenants Manual</a></li>
           <li><a href="#">Terms and Conditions</a></li>
           <li><a href="#">Privacy Policy</a></li>
           <li><a href="#">Payment Policy</a></li>
-          <li><a href="/contact">Contact us</a></li>
+          <li><Link to="/contact">Contact us</Link></li>
         </ul>
       </div>
       <div className="footer-col contact">

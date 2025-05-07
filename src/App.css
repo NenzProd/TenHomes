@@ -1,3 +1,14 @@
+:root {
+  --primary-color: #e67e22;
+  --primary-light: #fbeee6;
+  --primary-dark: #b35400;
+  --success-color: #2e7d32;
+  --error-color: #f44336;
+  --border-color: #e0e0e0;
+  --radius-md: 8px;
+  --shadow-md: 0 2px 8px rgba(0,0,0,0.08);
+}
+
 * {
   margin: 0;
   padding: 0;
