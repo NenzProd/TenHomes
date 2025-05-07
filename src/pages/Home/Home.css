@@ -913,6 +913,7 @@
   width: 80%;
   max-width: 320px;
   display: block;
+  text-align: center;
 }
 .how-it-works-btn.owners {
   background: #d35d4e;

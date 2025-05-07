@@ -9,6 +9,8 @@ import ForOwners from './pages/ForOwners/ForOwners';
 import OwnersManual from './pages/OwnersManual/OwnersManual';
 import TenantsManual from './pages/TenantsManual/TenantsManual';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions/TermsConditions';
+import PaymentPolicy from './pages/PaymentPolicy/PaymentPolicy';
 
 import './App.css';
 
@@ -29,6 +31,8 @@ function App() {
             <Route path="/for-tenants" element={<div className="page-container"><h1>For Tenants Page</h1><p>Coming soon</p></div>} />
             <Route path="/pricing" element={<div className="page-container"><h1>Pricing Page</h1><p>Coming soon</p></div>} />
             <Route path="/contact" element={<div className="page-container"><h1>Contact Page</h1><p>Coming soon</p></div>} />
+            <Route path="/terms-conditions" element={<TermsConditions />} />
+            <Route path="/payment-policy" element={<PaymentPolicy />} />
           </Routes>
         </main>
       </div>

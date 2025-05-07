@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import './Home.css';
 import houseOwnerImg from '../../assets/house owner.jpg';
 import cozyPGImg from '../../assets/cozyPG.webp';
@@ -166,7 +167,7 @@ const Home = () => {
             </p>
             {/* Call to Action Buttons */}
             <div className="hero-buttons">
-              <button className="hero-cta primary">List Your House</button>
+              <Link to="/for-owners" className="hero-cta primary">List Your House</Link>
               <button className="hero-cta secondary">Find a PG Home</button>
             </div>
           </div>
@@ -309,9 +310,9 @@ const Home = () => {
                 <div className="owner-benefits-cta-desc">
                   Discover how TenHomes transforms your under-utilised space into a profitable, worry-free PG business—without compromising on safety or peace of mind.
                 </div>
-                <button className="owner-benefits-cta-btn about-cta-btn">
+                <Link to="/for-owners" className="owner-benefits-cta-btn about-cta-btn">
                   Get Started & Unlock Your Home's True Potential
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -366,7 +367,7 @@ const Home = () => {
                 <div className="how-it-works-step-title">Earn Hassle-Free</div>
                 <div className="how-it-works-step-desc">We fill your rooms, manage tenants, and remit you guaranteed rent on-time—every month.</div>
               </div>
-              <button className="how-it-works-btn owners">List Your House</button>
+              <Link to="/for-owners" className="how-it-works-btn owners">List Your House</Link>
             </div>
           </div>
         </div>
