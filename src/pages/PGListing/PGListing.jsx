@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../../component/Navbar/Navbar";
 import "./PGListing.css";
 import PropertyList from "./PropertyList";
 import FilterSidebar from "./FilterSidebar";
@@ -26,7 +25,7 @@ const PGListing = () => {
 
   return (
     <div className="pglisting-page">
-      <Navbar />
+      
       <section className="pglisting-hero">
         <video className="pglisting-hero-video" autoPlay loop muted playsInline>
           <source src="/src/assets/Videos/mirror.mp4" type="video/mp4" />
