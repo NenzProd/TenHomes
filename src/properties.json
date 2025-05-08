@@ -1,0 +1,135 @@
+[
+  {
+    "id": 101,
+    "name": "Peaceful PG in Anna Nagar",
+    "location": "Anna Nagar, Chennai",
+    "area": "Anna Nagar",
+    "price": 7500,
+    "priceDisplay": "₹7,500/month",
+    "occupancy": ["single", "double"],
+    "amenities": ["wifi", "ac", "laundry", "cleaning", "kitchen"],
+    "image": "images/TenHomes-JBN/1570767080818.jpg",
+    "gallery": [
+      "images/TenHomes-JBN/kitchen.jpg",
+      "images/TenHomes-JBN/IMG-20220116-WA0026.jpg",
+      "images/TenHomes-JBN/IMG-20220116-WA0024.jpg",
+      "images/TenHomes-JBN/1570767080818.jpg"
+    ],
+    "featured": true,
+    "rating": 4.6,
+    "reviews": 12,
+    "introText": "Looking for a peaceful, home-style PG stay in Anna Nagar? This fully furnished 2BHK PG offers the perfect blend of comfort, privacy, and affordability. Ideal for working professionals and students.",
+    "roomFeatures": [
+      "Single & Double Sharing Options",
+      "Cot with foam mattress",
+      "Spacious wardrobe with mirror",
+      "Study table with ergonomic chair",
+      "Ceiling fan and lights",
+      "Window curtains",
+      "Split AC",
+      "Attached Western-style bathroom"
+    ],
+    "sharedAmenities": [
+      "Sofa and center table in common living space",
+      "Fridge (shared)",
+      "Washing machine (shared)",
+      "Dining table",
+      "High-speed Wi-Fi",
+      "Weekly room cleaning"
+    ],
+    "kitchenAccess": [
+      "Self-cooking allowed",
+      "Shared kitchen with gas stove",
+      "Each person gets a separate shelf for storing personal utensils",
+      "Utensils & cookware to be brought by the tenant",
+      "Microwave not provided"
+    ],
+    "utilities": [
+      "Electricity on separate sub-meters – shared and billed per room usage",
+      "No additional charges for Wi-Fi, water, or common area maintenance"
+    ],
+    "safety": [
+      "Located in a safe, gated residential locality",
+      "24x7 CCTV Surveillance",
+      "Separate entry for PG tenants",
+      "Walking distance to metro, banks, gyms & eateries"
+    ],
+    "rentDetails": [
+      "₹7,500/month – Double Sharing",
+      "Room Electricity charges extra (as per usage)",
+      "Common eb included",
+      "No extra maintenance or hidden costs"
+    ],
+    "distance": {
+      "metro": "Walking distance",
+      "busStop": "Nearby",
+      "market": "Nearby"
+    },
+    "contact": {
+      "phone": "+91 98401 67444",
+      "email": "info@tenhomes.in"
+    }
+  },
+  {
+    "id": 102,
+    "name": "TenHomes Working Women's PG Gerugambakkam",
+    "location": "Gerugambakkam, Chennai",
+    "area": "Gerugambakkam",
+    "price": 6500,
+    "priceDisplay": "₹6,500/month",
+    "occupancy": ["double", "four"],
+    "amenities": ["wifi", "ac", "laundry", "cleaning", "kitchen", "parking"],
+    "image": "images/Tenhomes- GERUGAMBAKKAM/2025-01-25 - Bedroom - Modern.webp",
+    "gallery": [
+      "images/Tenhomes- GERUGAMBAKKAM/2025-01-25-(1) - Living Room - Standard.webp",
+      "images/Tenhomes- GERUGAMBAKKAM/GR2-480913-2381475.jpg"
+    ],
+    "featured": false,
+    "rating": 4.3,
+    "reviews": 12,
+    "introText": "Fully furnished rooms for a comfortable stay. Self-cooking kitchen for personal meal preferences. Prime location near Porur DLF with easy access to offices. High-speed internet for seamless work and entertainment.",
+    "roomFeatures": [
+      "Double & Four Sharing Options",
+      "Comfortable beds",
+      "Wardrobe",
+      "Ceiling fan and lights",
+      "Attached bathroom (select rooms)",
+      "AC rooms available"
+    ],
+    "sharedAmenities": [
+      "Room cleaning service",
+      "Parking",
+      "Power backup",
+      "Fridge",
+      "Lift"
+    ],
+    "kitchenAccess": [
+      "Self-cooking allowed",
+      "Shared kitchen for residents"
+    ],
+    "utilities": [
+      "Deposit: ₹13,000",
+      "Electricity charges extra (as per usage)",
+      "No additional maintenance charges"
+    ],
+    "safety": [
+      "Located in a safe residential locality",
+      "No gate closing time",
+      "Visitor entry allowed"
+    ],
+    "rentDetails": [
+      "₹6,500/month per bed",
+      "Deposit: ₹13,000",
+      "2 months notice period"
+    ],
+    "distance": {
+      "metro": "Near Porur DLF",
+      "busStop": "Nearby",
+      "market": "Nearby"
+    },
+    "contact": {
+      "phone": "+91 98401 67444",
+      "email": "info@tenhomes.in"
+    }
+  }
+]
