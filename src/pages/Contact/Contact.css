@@ -1,0 +1,414 @@
+.contact-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.contact-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.contact-header h1 {
+  font-size: 2.5rem;
+  color: #1a365d;
+  margin-bottom: 8px;
+}
+.contact-header p {
+  color: #4a5568;
+  font-size: 1.1rem;
+}
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+.contact-info {
+  flex: 1 1 250px;
+  min-width: 220px;
+  color: #2d3748;
+}
+.contact-info h2 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  color: #1a365d;
+}
+.contact-info p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+.contact-info a {
+  color: #3182ce;
+  text-decoration: none;
+}
+.contact-form {
+  flex: 2 1 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f7fafc;
+  resize: none;
+}
+.contact-form textarea {
+  min-height: 100px;
+}
+.contact-form button {
+  background: #1a365d;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-form button:hover {
+  background: #274690;
+}
+.contact-success {
+  margin-top: 12px;
+  color: #38a169;
+  font-weight: 500;
+}
+@media (max-width: 700px) {
+  .contact-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .contact-page {
+    padding: 12px;
+  }
+}
+.contactus-outer {
+  background: #fdf6e3;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+.contactus-hero {
+  width: 100%;
+  min-height: 260px;
+  background: linear-gradient(rgba(200, 80, 50, 0.35), rgba(200, 80, 50, 0.35)), url('https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.contactus-hero-overlay {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  padding: 60px 0 40px 0;
+  background: rgba(0,0,0,0.15);
+}
+.contactus-hero-overlay h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+.contactus-hero-overlay p {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.contactus-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin-top: -60px;
+  z-index: 2;
+  position: relative;
+}
+.contactus-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 32px 28px 24px 28px;
+  min-width: 240px;
+  max-width: 320px;
+  flex: 1 1 220px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+.contactus-card:hover {
+  box-shadow: 0 4px 24px rgba(200,80,50,0.13);
+}
+.contactus-icon {
+  font-size: 2.5rem;
+  color: #d16a5a;
+  margin-bottom: 16px;
+}
+.contactus-card h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+.contactus-card-desc {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+.contactus-card-desc a {
+  color: #d16a5a;
+  text-decoration: none;
+  word-break: break-all;
+}
+.contactus-card-desc a:hover {
+  text-decoration: underline;
+}
+.contactus-enquiry-section {
+  max-width: 500px;
+  margin: 60px auto 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 36px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.enquiry-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+  color: #222;
+}
+.enquiry-subtitle {
+  font-size: 1.05rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.enquiry-category {
+  width: 100%;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.enquiry-category-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+.enquiry-radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+.enquiry-radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #222;
+  cursor: pointer;
+}
+.enquiry-radio-group input[type="radio"] {
+  accent-color: #4a7c59;
+  width: 18px;
+  height: 18px;
+}
+.enquiry-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 10px;
+}
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f7fafc;
+  transition: border 0.2s;
+}
+.enquiry-form input:focus,
+.enquiry-form select:focus,
+.enquiry-form textarea:focus {
+  border: 1.5px solid #d16a5a;
+  outline: none;
+}
+.enquiry-form textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+.enquiry-submit-btn {
+  background: #d16a5a;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.enquiry-submit-btn:hover {
+  background: #b94e3a;
+}
+.enquiry-submit-btn.owner-btn {
+  background: #d16a5a;
+  color: #fff;
+}
+.enquiry-submit-btn.owner-btn:hover {
+  background: #b94e3a;
+}
+.enquiry-submit-btn.tenant-btn {
+  background: #6b7f5c;
+  color: #fff;
+}
+.enquiry-submit-btn.tenant-btn:hover {
+  background: #55704a;
+}
+.contactus-social-section {
+  background: #f7f7f7;
+  margin: 60px 0 0 0;
+  padding: 48px 0 56px 0;
+  text-align: center;
+}
+.social-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+.social-highlight {
+  color: #d16a5a;
+  border-bottom: 3px solid #d16a5a;
+  padding-bottom: 2px;
+}
+.social-subtitle {
+  color: #666;
+  font-size: 1.08rem;
+  margin-bottom: 36px;
+}
+.social-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 36px auto 0 auto;
+  padding: 0 20px;
+}
+.social-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+  padding: 28px 16px 24px 16px;
+  min-width: 180px;
+  flex: 1 1 200px;
+  max-width: 240px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+.social-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: #999;
+  transition: all 0.3s ease;
+}
+.social-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+.social-icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  color: white;
+}
+.social-card .social-label {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 8px;
+}
+.social-card.facebook::before {
+  background-color: #4267B2;
+}
+.social-card.facebook .social-icon-circle {
+  background-color: #4267B2;
+}
+.social-card.instagram::before {
+  background: linear-gradient(45deg, #fd5d47 0%, #fcb045 25%, #e1306c 50%, #5851db 100%);
+}
+.social-card.instagram .social-icon-circle {
+  background: linear-gradient(45deg, #fd5d47 0%, #fcb045 25%, #e1306c 50%, #5851db 100%);
+}
+.social-card.linkedin::before {
+  background-color: #0077b5;
+}
+.social-card.linkedin .social-icon-circle {
+  background-color: #0077b5;
+}
+.social-card.youtube::before {
+  background-color: #ff0000;
+}
+.social-card.youtube .social-icon-circle {
+  background-color: #ff0000;
+}
+.social-card:hover .social-icon-circle {
+  transform: scale(1.1);
+}
+@media (max-width: 900px) {
+  .contactus-cards-wrapper {
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 0;
+  }
+  .contactus-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .social-cards-wrapper {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .social-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+@media (max-width: 600px) {
+  .contactus-enquiry-section {
+    padding: 18px 6px 18px 6px;
+  }
+}

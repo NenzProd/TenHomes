@@ -56,10 +56,10 @@ const Navbar = () => {
         </div>
 
         <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
-          <li><Link to="/home" className="active">Home</Link></li>
+          <li><Link to="/" className="active">Home</Link></li>
           <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/services">Services</Link></li>
-          <li><Link to="/properties">Properties</Link></li>
+          <li><Link to="/pglisting">Services</Link></li>
+          <li><Link to="/pglisting">Properties</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
 
