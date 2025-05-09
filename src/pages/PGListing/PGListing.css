@@ -72,7 +72,7 @@
 
 .pglisting-properties-title {
   font-size: 2.4rem;
-  color: #c75c4a;
+  color: #CD5D4E;
   text-align: center;
   margin-bottom: 2rem;
   font-weight: 700;
@@ -130,7 +130,7 @@
   right: 12px;
   top: 50%;
   transform: translateY(-50%);
-  color: #c75c4a;
+  color: #CD5D4E;
   pointer-events: none;
 }
 
@@ -158,12 +158,12 @@
 
 .filter-title h3 {
   font-size: 1.2rem;
-  color: #c75c4a;
+  color: #CD5D4E;
   margin: 0;
 }
 
 .filter-icon {
-  color: #c75c4a;
+  color: #CD5D4E;
 }
 
 .reset-filters {
@@ -177,7 +177,7 @@
 }
 
 .reset-filters:hover {
-  color: #c75c4a;
+  color: #CD5D4E;
 }
 
 .filter-section {
@@ -230,11 +230,11 @@
 
 .price-slider {
   width: 100%;
-  accent-color: #e67e22;
+  accent-color: #CD5D4E;
 }
 
 .apply-filters-btn {
-  background-color: #e67e22;
+  background-color: #CD5D4E;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -248,7 +248,7 @@
 }
 
 .apply-filters-btn:hover {
-  background-color: #c75c4a;
+  background-color: #a94436;
 }
 
 .filter-checkbox, .filter-radio {
@@ -260,7 +260,7 @@
 
 .filter-checkbox input[type="checkbox"],
 .filter-radio input[type="radio"] {
-  accent-color: #e67e22;
+  accent-color: #CD5D4E;
   width: 16px;
   height: 16px;
   cursor: pointer;
@@ -272,6 +272,73 @@
   cursor: pointer;
 }
 
+/* Floating filter button for mobile */
+.floating-filter-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 24px;
+  z-index: 1200;
+  background: #CD5D4E;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.9rem 1.6rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.floating-filter-btn:hover {
+  background: #a94436;
+}
+
+/* Modal for mobile filter */
+.mobile-filter-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1300;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.mobile-filter-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1301;
+}
+.mobile-filter-content {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 -2px 16px rgba(0,0,0,0.13);
+  z-index: 1302;
+  padding: 1.2rem 1rem 2rem 1rem;
+  animation: slideUp 0.25s cubic-bezier(.4,0,.2,1);
+}
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+.close-mobile-filter {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #CD5D4E;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Hide desktop sidebar and show floating button on mobile */
 @media (max-width: 1024px) {
   .pglisting-content-wrapper {
     flex-direction: column;
@@ -288,6 +355,13 @@
     max-width: 600px;
     margin: 0 auto;
   }
+
+  .desktop-only { display: none !important; }
+  .mobile-only { display: block !important; }
+}
+
+@media (min-width: 1025px) {
+  .mobile-only { display: none !important; }
 }
 
 @media (max-width: 768px) {

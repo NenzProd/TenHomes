@@ -3,11 +3,12 @@ import "./PGListing.css";
 import PropertyList from "./PropertyList";
 import FilterSidebar from "./FilterSidebar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faFilter } from '@fortawesome/free-solid-svg-icons';
 
 const PGListing = () => {
   const [filters, setFilters] = useState({});
   const [sortOption, setSortOption] = useState('Most Popular');
+  const [showMobileFilter, setShowMobileFilter] = useState(false);
 
   const handleFilterChange = (newFilters) => {
     setFilters(prev => ({ ...prev, ...newFilters }));
@@ -42,12 +43,36 @@ const PGListing = () => {
           <h2 className="pglisting-properties-title">PG Accommodations</h2>
           
           <div className="pglisting-content-wrapper">
-            <div className="pglisting-sidebar">
+            {/* Sidebar for desktop */}
+            <div className="pglisting-sidebar desktop-only">
               <FilterSidebar 
                 onFilterChange={handleFilterChange}
                 onApplyFilters={handleApplyFilters}
               />
             </div>
+            
+            {/* Floating filter button for mobile */}
+            <button 
+              className="floating-filter-btn mobile-only"
+              onClick={() => setShowMobileFilter(true)}
+              aria-label="Show Filters"
+            >
+              <FontAwesomeIcon icon={faFilter} /> Filters
+            </button>
+            
+            {/* Modal for mobile filter */}
+            {showMobileFilter && (
+              <div className="mobile-filter-modal">
+                <div className="mobile-filter-backdrop" onClick={() => setShowMobileFilter(false)} />
+                <div className="mobile-filter-content">
+                  <button className="close-mobile-filter" onClick={() => setShowMobileFilter(false)}>&times;</button>
+                  <FilterSidebar 
+                    onFilterChange={handleFilterChange}
+                    onApplyFilters={(data) => { handleApplyFilters(data); setShowMobileFilter(false); }}
+                  />
+                </div>
+              </div>
+            )}
             
             <div className="pglisting-main-content">
               <div className="pglisting-sort-container">

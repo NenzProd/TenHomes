@@ -1706,10 +1706,132 @@
   .faq-answer {
     padding: 0 12px 14px 12px;
     font-size: 0.98rem;
-  }
-  .faq-cta-btn {
+  }  .faq-cta-btn {
     font-size: 0.98rem;
     padding: 0.8rem 1.2rem;
     border-radius: 1.2rem;
+  }
+}
+.contact-floating-buttons {
+  position: fixed;
+  right: 20px; /* Adjusted for spacing from edge */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Kept for centering children */
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+  gap: 15px; /* Added for spacing between options and toggle button */
+}
+
+.contact-floating-buttons.visible .contact-floating-buttons-container {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.contact-floating-buttons.hidden .contact-floating-buttons-container {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.whatsapp-options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* margin-right: 20px; Removed as parent handles centering */
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(20px); /* Animation remains, relative to centered position */
+  pointer-events: none;
+}
+
+.whatsapp-options-container.visible {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.whatsapp-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  min-width: 180px;
+  font-size: 14px;
+}
+
+.whatsapp-option:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-option span {
+  font-size: 14px;
+}
+
+.whatsapp-option.owners {
+  background-color: #128C7E;
+}
+
+.whatsapp-option.tenants {
+  background-color: #25D366;
+}
+
+.contact-floating-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Changed to full circle */
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adjusted for circular button */
+  transition: all 0.3s ease;
+}
+
+.contact-floating-toggle.whatsapp {
+  background-color: #25D366; /* WhatsApp green */
+}
+
+.contact-floating-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contact-floating-buttons {
+    right: -25px; /* Adjusted for smaller screens */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .whatsapp-option {
+    padding: 10px 16px;
+    min-width: 160px;
+    font-size: 13px;
+  }
+  
+  .whatsapp-option span {
+    font-size: 13px;
+  }
+  
+  .contact-floating-toggle {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
   }
 }

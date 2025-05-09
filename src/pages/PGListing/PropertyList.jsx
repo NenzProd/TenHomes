@@ -66,7 +66,7 @@ const PropertyList = () => {
               </span>
             </div>
             <div className="property-location-row">
-              <FontAwesomeIcon icon={faMapMarkerAlt} style={{ color: '#e67e22', marginRight: 4 }} />
+              <FontAwesomeIcon icon={faMapMarkerAlt} style={{ color: '#CD5D4E', marginRight: 4 }} />
               <span>{property.location}</span>
             </div>
             <div className="property-price-box">
@@ -78,7 +78,7 @@ const PropertyList = () => {
               <span className="property-room-label">Room Options</span>
               {property.occupancy.map((type) => (
                 <span className="property-room-badge" key={type}>
-                  <FontAwesomeIcon icon={faUser} style={{ marginRight: 3 }} /> {occupancyLabels[type] || type}
+                  <FontAwesomeIcon icon={faUser} style={{ marginRight: 3, color: '#CD5D4E' }} /> {occupancyLabels[type] || type}
                 </span>
               ))}
             </div>
@@ -86,7 +86,7 @@ const PropertyList = () => {
               <span className="property-amenities-label">Key Amenities</span>
               <div className="property-amenities-icons">
                 {property.amenities.slice(0, 5).map((amenity) => (
-                  <span className="property-amenity-icon" key={amenity} title={amenity}>
+                  <span className="property-amenity-icon" key={amenity} title={amenity} style={{ color: '#CD5D4E' }}>
                     {amenityIcons[amenity] || amenity}
                   </span>
                 ))}

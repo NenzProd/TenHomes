@@ -5,7 +5,8 @@ import houseOwnerImg from '../../assets/house owner.jpg';
 import cozyPGImg from '../../assets/cozyPG.webp';
 import ownerMeetingImg from '../../assets/TenHomes-Owner-meet.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoneyBillWave, faClock, faShieldAlt, faUserFriends, faHome, faRupeeSign, faFileContract, faKey, faGem, faChevronLeft, faChevronRight, faCouch, faUtensils, faWifi, faBath, faBook, faBlender, faSnowflake, faBroom } from '@fortawesome/free-solid-svg-icons';
+import { faMoneyBillWave, faClock, faShieldAlt, faUserFriends, faHome, faRupeeSign, faFileContract, faKey, faGem, faChevronLeft, faChevronRight, faCouch, faUtensils, faWifi, faBath, faBook, faBlender, faSnowflake, faBroom, faPhone, faTimes, faComments } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 /**
  * =====================================================
@@ -101,6 +102,19 @@ const Home = () => {
   const isDragging = useRef(false);
   const startX = useRef(0);
   const scrollLeft = useRef(0);
+  // Floating button state
+  const [isFloatingButtonVisible, setIsFloatingButtonVisible] = useState(true);
+  const [showWhatsAppOptions, setShowWhatsAppOptions] = useState(false);
+  
+  // Toggle floating button visibility
+  const toggleFloatingButton = () => {
+    setIsFloatingButtonVisible(!isFloatingButtonVisible);
+  };
+  
+  // Toggle WhatsApp options visibility
+  const toggleWhatsAppOptions = () => {
+    setShowWhatsAppOptions(!showWhatsAppOptions);
+  };
 
   // Drag handlers
   const handleMouseDown = (e) => {
@@ -535,7 +549,34 @@ const Home = () => {
             <button className="faq-cta-btn">Talk to TenHomes</button>
           </div>
         </div>
-      </section>
+      </section>      {/* WhatsApp Floating Button */}
+      <div className={`contact-floating-buttons ${isFloatingButtonVisible ? 'visible' : 'hidden'}`}>
+        <div className={`whatsapp-options-container ${showWhatsAppOptions ? 'visible' : 'hidden'}`}>
+          <a 
+            href="https://wa.me/919876543210?text=Hi%20TenHomes,%20I'm%20a%20house%20owner%20interested%20in%20your%20PG%20management%20services." 
+            className="whatsapp-option owners"
+          >
+            <FontAwesomeIcon icon={faHome} />
+            <span>I'm a House Owner</span>
+          </a>
+          <a 
+            href="https://wa.me/919876543210?text=Hi%20TenHomes,%20I'm%20looking%20for%20PG%20accommodation." 
+            className="whatsapp-option tenants"
+          >
+            <FontAwesomeIcon icon={faUserFriends} />
+            <span>I'm Looking for PG</span>
+          </a>
+        </div>
+        <button 
+          className="contact-floating-toggle whatsapp" 
+          onClick={toggleWhatsAppOptions}
+          aria-label="Contact via WhatsApp"
+        >
+          {showWhatsAppOptions ? 
+            <FontAwesomeIcon icon={faTimes} /> : 
+            <FontAwesomeIcon icon={faWhatsapp} />}
+        </button>
+      </div>
     </div> // Closing home-page div
   ); // Closing return statement
 };
