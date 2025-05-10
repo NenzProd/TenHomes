@@ -294,47 +294,45 @@ const Home = () => {
 
       {/* 
         =================================================
-        OWNER BENEFITS SECTION (cards)
+        OWNER BENEFITS SECTION (redesigned)
         =================================================
       */}
       <section className="owner-benefits-hesitations-section">
-        <div className="owner-benefits-hesitations-wrapper">
-          <div className="owner-benefits-cards">
-            <div className="benefits-block">
-              <h2 className="benefits-title">
-                <FontAwesomeIcon icon={faKey} className="benefits-icon" /> Why Let Your Home as a PG?
-              </h2>
-              <div className="benefits-cards-grid custom-benefits-grid">
-                {benefitCardData.map((card, idx) => (
-                  <div className="benefit-card custom-benefit-card" key={idx}>
-                    <img src={card.img} alt={card.label} className="benefit-img custom-benefit-img" />
-                    <span className="custom-benefit-label">{card.label}</span>
-                  </div>
-                ))}
-              </div>
+        <div className="owner-benefits-ss-redesign">
+          <div className="owner-benefits-ss-header">
+            <span className="owner-benefits-ss-diamond">
+              <FontAwesomeIcon icon={faGem} />
+            </span>
+            <span className="owner-benefits-ss-title">Owner Benefits with TenHomes</span>
+          </div>
+          <div className="owner-benefits-ss-cards">
+            <div className="owner-benefits-ss-card">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Verified tenants only" className="owner-benefits-ss-img" />
+              <div className="owner-benefits-ss-label">Verified tenants only</div>
             </div>
-            <div className="owner-benefits-block">
-              <h2 className="benefits-title">
-                <FontAwesomeIcon icon={faGem} className="benefits-icon" /> Owner Benefits with TenHomes
-              </h2>
-              <div className="benefits-cards-grid">
-                <div className="benefit-card"><FontAwesomeIcon icon={faUserFriends} className="benefit-icon-img" /><span>Verified tenants only</span></div>
-                <div className="benefit-card"><FontAwesomeIcon icon={faClock} className="benefit-icon-img" /><span>Full property management & maintenance</span></div>
-                <div className="benefit-card"><FontAwesomeIcon icon={faRupeeSign} className="benefit-icon-img" /><span>On-time, guaranteed rent</span></div>
-                <div className="benefit-card"><FontAwesomeIcon icon={faFileContract} className="benefit-icon-img" /><span>All paperwork & compliance handled</span></div>
-              </div>              <div className="owner-benefits-cta">
-                <div className="owner-benefits-cta-title">
-                  Curious how we make it so effortless?
-                </div>
-                <div className="owner-benefits-cta-desc">
-                  Discover how TenHomes transforms your under-utilised space into a profitable, 
-                  worry-free PG business—without compromising on safety or peace of mind.
-                </div>
-                <Link to="/for-owners" className="owner-benefits-cta-btn about-cta-btn">
-                  Get Started & Unlock Your Home's True Potential
-                </Link>
-              </div>
+            <div className="owner-benefits-ss-card">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Full property management & maintenance" className="owner-benefits-ss-img" />
+              <div className="owner-benefits-ss-label">Full property management & maintenance</div>
             </div>
+            <div className="owner-benefits-ss-card">
+              <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="On-time, guaranteed rent" className="owner-benefits-ss-img" />
+              <div className="owner-benefits-ss-label">On-time, guaranteed rent</div>
+            </div>
+            <div className="owner-benefits-ss-card">
+              <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="All paperwork & compliance handled" className="owner-benefits-ss-img" />
+              <div className="owner-benefits-ss-label">All paperwork & compliance handled</div>
+            </div>
+          </div>
+          <div className="owner-benefits-ss-desc-block">
+            <div className="owner-benefits-ss-desc-title">
+              Curious how we make it so effortless?
+            </div>
+            <div className="owner-benefits-ss-desc-text">
+              Discover how TenHomes transforms your under-utilised space into a profitable, worry-free PG business—without compromising on safety or peace of mind.
+            </div>
+            <Link to="/for-owners" className="owner-benefits-ss-cta-btn">
+              Get Started & Unlock Your Home's True Potential
+            </Link>
           </div>
         </div>
       </section>

@@ -319,6 +319,129 @@
 
 /* 
 * ==============================================
+* Redesigned Owner Benefits with TenHomes Section
+* ==============================================
+*/
+.owner-benefits-ss-redesign {
+  background: #fff6ee;
+  border-radius: 22px;
+  box-shadow: 0 2px 16px 0 rgba(199,92,74,0.07);
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  margin: 2.5rem auto 2rem auto;
+  max-width: 900px;
+  text-align: center;
+  border: 1.5px solid #ffe2d2;
+}
+.owner-benefits-ss-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-bottom: 2.2rem;
+}
+.owner-benefits-ss-diamond {
+  color: #c75c4a;
+  font-size: 2.1rem;
+  vertical-align: middle;
+}
+.owner-benefits-ss-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c75c4a;
+  letter-spacing: 0.5px;
+}
+.owner-benefits-ss-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.2rem 2.5rem;
+  margin-bottom: 2.2rem;
+}
+.owner-benefits-ss-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px 0 rgba(199,92,74,0.08);
+  padding: 1.2rem 1.1rem 1.1rem 1.1rem;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1.5px solid #ffe2d2;
+}
+.owner-benefits-ss-card:hover {
+  box-shadow: 0 4px 24px 0 rgba(199,92,74,0.13);
+  transform: translateY(-4px) scale(1.03);
+}
+.owner-benefits-ss-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffe2d2;
+  margin-bottom: 1rem;
+  background: #fff6ee;
+}
+.owner-benefits-ss-label {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-top: 0.2rem;
+  text-align: center;
+}
+.owner-benefits-ss-desc-block {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.owner-benefits-ss-desc-title {
+  font-weight: 700;
+  font-size: 1.13rem;
+  margin-bottom: 0.5rem;
+  color: #2d2d2d;
+}
+.owner-benefits-ss-desc-text {
+  color: #6d4c41;
+  font-size: 1.01rem;
+  margin-bottom: 1.3rem;
+}
+.owner-benefits-ss-cta-btn {
+  background: #c75c4a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.08rem;
+  border: none;
+  border-radius: 22px;
+  padding: 0.85rem 2.2rem;
+  box-shadow: 0 2px 8px 0 rgba(199,92,74,0.10);
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+  outline: none;
+  display: inline-block;
+}
+.owner-benefits-ss-cta-btn:hover {
+  background: #a94a3a;
+  box-shadow: 0 4px 16px 0 rgba(199,92,74,0.18);
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 700px) {
+  .owner-benefits-ss-redesign {
+    padding: 1.2rem 0.2rem 1.5rem 0.2rem;
+    max-width: 99vw;
+  }
+  .owner-benefits-ss-cards {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .owner-benefits-ss-card {
+    width: 90vw;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+/* 
+* ==============================================
 * TESTIMONIALS SECTION
 * ==============================================
 */
@@ -365,7 +488,7 @@
 }
 .testimonial-card:hover {
   box-shadow: 0 8px 24px 0 rgba(0,0,0,0.13);
-  transform: translateY(-5px) scale(1.03);
+  transform: translateY(-5px);
 }
 .testimonial-stars {
   color: #ffc107;
