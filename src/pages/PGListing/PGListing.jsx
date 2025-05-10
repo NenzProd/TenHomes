@@ -4,6 +4,7 @@ import PropertyList from "./PropertyList";
 import FilterSidebar from "./FilterSidebar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faFilter } from '@fortawesome/free-solid-svg-icons';
+import mirrorVideo from '../../assets/Videos/mirror.mp4';
 
 const PGListing = () => {
   const [filters, setFilters] = useState({});
@@ -29,7 +30,7 @@ const PGListing = () => {
       
       <section className="pglisting-hero">
         <video className="pglisting-hero-video" autoPlay loop muted playsInline>
-          <source src="/src/assets/Videos/mirror.mp4" type="video/mp4" />
+          <source src={mirrorVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="pglisting-hero-overlay">

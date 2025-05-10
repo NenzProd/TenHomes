@@ -5,8 +5,14 @@ import houseOwnerImg from '../../assets/house owner.jpg';
 import cozyPGImg from '../../assets/cozyPG.webp';
 import ownerMeetingImg from '../../assets/TenHomes-Owner-meet.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoneyBillWave, faClock, faShieldAlt, faUserFriends, faHome, faRupeeSign, faFileContract, faKey, faGem, faChevronLeft, faChevronRight, faCouch, faUtensils, faWifi, faBath, faBook, faBlender, faSnowflake, faBroom, faPhone, faTimes, faComments } from '@fortawesome/free-solid-svg-icons';
+import { faMoneyBillWave, faClock, faShieldAlt, faUserFriends, faHome, faRupeeSign, faFileContract, faKey, faGem, faChevronLeft, faChevronRight, faCouch, faUtensils, faWifi, faBath, faBook, faBlender, faSnowflake, faBroom, faPhone, faTimes, faComments, faSearch, faUser, faBed, faDoorOpen, faWindowMaximize, faFan, faCircle } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import matressVideo from '../../assets/Videos/matress.mp4';
+import cupboardVideo from '../../assets/Videos/cupboard.mp4';
+import curtainVideo from '../../assets/Videos/curtain.mp4';
+import fanLightVideo from '../../assets/Videos/fan light.mp4';
+import mirrorVideo from '../../assets/Videos/mirror.mp4';
+import acVideo from '../../assets/Videos/ac.mp4';
 
 /**
  * =====================================================
@@ -76,12 +82,12 @@ const Home = () => {
   ];
 
   const whatsInsideItems = [
-    { icon: '🛏️', title: 'Bed & Mattress', desc: 'Sleep-ready setup with quality foam mattress.', video: 'matress.mp4', longDesc: "High-quality mattress that provides excellent support for a good night's sleep. Our mattresses are made with premium foam materials for durability and comfort." },
-    { icon: '🪞', title: 'Wardrobe', desc: 'Spacious storage for your belongings.', video: 'cupboard.mp4', longDesc: "Spacious built-in wardrobes with multiple storage compartments. Each wardrobe has hanging space, shelves, and drawers to organize all your belongings." },
-    { icon: '🪟', title: 'Curtain', desc: 'Window curtains for privacy and comfort.', video: 'curtain.mp4', longDesc: "Premium blackout curtains provide privacy and light control. The elegant curtains complement the room's decor and help regulate room temperature." },
-    { icon: '💡', title: 'Ceiling Fan & Lights', desc: 'Bright, airy, and well-lit rooms.', video: 'fan light.mp4', longDesc: "High-quality ceiling fans with integrated lighting fixtures. The fans provide excellent air circulation and can be used alongside AC or as an energy-saving alternative." },
-    { icon: '🪞', title: 'Mirror', desc: 'Full-length mirror for daily use.', video: 'mirror.mp4', longDesc: "Full-length mirrors to help you get ready with confidence. The mirrors are strategically placed to maximize light and create a sense of space." },
-    { icon: '❄️', title: 'AC', desc: 'Air-conditioned comfort in select rooms.', video: 'ac.mp4', longDesc: "Modern air conditioning unit provides comfortable temperature control all year round. Our AC units are energy efficient and come with remote controls for easy temperature adjustment." }
+    { icon: faBed, title: 'Bed & Mattress', desc: 'Sleep-ready setup with quality foam mattress.', video: matressVideo, longDesc: "High-quality mattress that provides excellent support for a good night's sleep. Our mattresses are made with premium foam materials for durability and comfort." },
+    { icon: faDoorOpen, title: 'Wardrobe', desc: 'Spacious storage for your belongings.', video: cupboardVideo, longDesc: "Spacious built-in wardrobes with multiple storage compartments. Each wardrobe has hanging space, shelves, and drawers to organize all your belongings." },
+    { icon: faWindowMaximize, title: 'Curtain', desc: 'Window curtains for privacy and comfort.', video: curtainVideo, longDesc: "Premium blackout curtains provide privacy and light control. The elegant curtains complement the room's decor and help regulate room temperature." },
+    { icon: faFan, title: 'Ceiling Fan & Lights', desc: 'Bright, airy, and well-lit rooms.', video: fanLightVideo, longDesc: "High-quality ceiling fans with integrated lighting fixtures. The fans provide excellent air circulation and can be used alongside AC or as an energy-saving alternative." },
+    { icon: faCircle, title: 'Mirror', desc: 'Full-length mirror for daily use.', video: mirrorVideo, longDesc: "Full-length mirrors to help you get ready with confidence. The mirrors are strategically placed to maximize light and create a sense of space." },
+    { icon: faSnowflake, title: 'AC', desc: 'Air-conditioned comfort in select rooms.', video: acVideo, longDesc: "Modern air conditioning unit provides comfortable temperature control all year round. Our AC units are energy efficient and come with remote controls for easy temperature adjustment." }
   ];
 
   const extrasItems = [
@@ -316,13 +322,13 @@ const Home = () => {
                 <div className="benefit-card"><FontAwesomeIcon icon={faClock} className="benefit-icon-img" /><span>Full property management & maintenance</span></div>
                 <div className="benefit-card"><FontAwesomeIcon icon={faRupeeSign} className="benefit-icon-img" /><span>On-time, guaranteed rent</span></div>
                 <div className="benefit-card"><FontAwesomeIcon icon={faFileContract} className="benefit-icon-img" /><span>All paperwork & compliance handled</span></div>
-              </div>
-              <div className="owner-benefits-cta">
+              </div>              <div className="owner-benefits-cta">
                 <div className="owner-benefits-cta-title">
                   Curious how we make it so effortless?
                 </div>
                 <div className="owner-benefits-cta-desc">
-                  Discover how TenHomes transforms your under-utilised space into a profitable, worry-free PG business—without compromising on safety or peace of mind.
+                  Discover how TenHomes transforms your under-utilised space into a profitable, 
+                  worry-free PG business—without compromising on safety or peace of mind.
                 </div>
                 <Link to="/for-owners" className="owner-benefits-cta-btn about-cta-btn">
                   Get Started & Unlock Your Home's True Potential
@@ -342,10 +348,13 @@ const Home = () => {
         <div className="how-it-works-container">
           <h2 className="how-it-works-title">How It Works</h2>
           <div className="how-it-works-subtitle">See how TenHomes makes it easy for both Tenants & Owners</div>
-          <div className="how-it-works-grid">
-            {/* For Tenants */}
-            <div className="how-it-works-col">
-              <div className="how-it-works-col-title tenants">For Tenants</div>
+          <div className="how-it-works-grid">            {/* For Tenants */}
+            <div className="how-it-works-col">              <div className="how-it-works-col-logo-container tenants">
+                <div className="how-it-works-col-logo">
+                  <FontAwesomeIcon icon={faUserFriends} />
+                </div>
+                <div className="how-it-works-col-title tenants">For Tenants</div>
+              </div>
               <div className="how-it-works-step-card">
                 <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Find Your Home" className="how-it-works-img" />
                 <div className="how-it-works-step-title">Find Your Home</div>
@@ -362,10 +371,13 @@ const Home = () => {
                 <div className="how-it-works-step-desc">Move into your spacious, fully-managed, home-like PG with all amenities ready.</div>
               </div>
               <button className="how-it-works-btn tenants">Find Your PG Home</button>
-            </div>
-            {/* For Owners */}
-            <div className="how-it-works-col">
-              <div className="how-it-works-col-title owners">For Owners</div>
+            </div>            {/* For Owners */}
+            <div className="how-it-works-col">              <div className="how-it-works-col-logo-container owners">
+                <div className="how-it-works-col-logo">
+                  <FontAwesomeIcon icon={faUser} />
+                </div>
+                <div className="how-it-works-col-title owners">For Owners</div>
+              </div>
               <div className="how-it-works-step-card">
                 <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="List Your Property" className="how-it-works-img" />
                 <div className="how-it-works-step-title">List Your Property</div>
@@ -422,7 +434,9 @@ const Home = () => {
                   onClick={() => setSelectedIdx(idx)}
                   style={{ border: selectedIdx === idx ? '2px solid #c75c4a' : undefined }}
                 >
-                  <div className="whats-inside-room-icon">{item.icon}</div>
+                  <div className="whats-inside-room-icon">
+                    <FontAwesomeIcon icon={item.icon} />
+                  </div>
                   <div className="whats-inside-room-item-title">{item.title}</div>
                   <div className="whats-inside-room-item-desc">{item.desc}</div>
                 </div>
@@ -447,7 +461,7 @@ const Home = () => {
                   muted
                   poster={null}
                 >
-                  <source src={`/src/assets/Videos/${whatsInsideItems[selectedIdx].video}`} type="video/mp4" />
+                  <source src={whatsInsideItems[selectedIdx].video} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 <div className="whats-inside-video-label">{whatsInsideItems[selectedIdx].title}</div>
@@ -549,22 +563,26 @@ const Home = () => {
             <button className="faq-cta-btn">Talk to TenHomes</button>
           </div>
         </div>
-      </section>      {/* WhatsApp Floating Button */}
-      <div className={`contact-floating-buttons ${isFloatingButtonVisible ? 'visible' : 'hidden'}`}>
-        <div className={`whatsapp-options-container ${showWhatsAppOptions ? 'visible' : 'hidden'}`}>
+      </section>  
+          {/* WhatsApp Floating Button */}
+      <div className={`contact-floating-buttons ${isFloatingButtonVisible ? 'visible' : 'hidden'}`}> 
+        <div 
+          className={`whatsapp-options-container ${showWhatsAppOptions ? 'visible' : 'hidden'}`}
+        >
+          <div className="whatsapp-options-header">Chat with us on WhatsApp</div>
           <a 
             href="https://wa.me/919876543210?text=Hi%20TenHomes,%20I'm%20a%20house%20owner%20interested%20in%20your%20PG%20management%20services." 
             className="whatsapp-option owners"
           >
             <FontAwesomeIcon icon={faHome} />
-            <span>I'm a House Owner</span>
+            <span>List my<br/>property</span>
           </a>
           <a 
             href="https://wa.me/919876543210?text=Hi%20TenHomes,%20I'm%20looking%20for%20PG%20accommodation." 
             className="whatsapp-option tenants"
           >
-            <FontAwesomeIcon icon={faUserFriends} />
-            <span>I'm Looking for PG</span>
+            <FontAwesomeIcon icon={faSearch} />
+            <span>Looking for a<br/>PG</span>
           </a>
         </div>
         <button 
