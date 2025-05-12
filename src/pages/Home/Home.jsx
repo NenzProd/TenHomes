@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import Link
 import './Home.css';
 import houseOwnerImg from '../../assets/house owner.jpg';
@@ -104,10 +104,15 @@ const Home = () => {
 
   const carouselRef = useRef(null);
   const [selectedIdx, setSelectedIdx] = useState(0);
+  const videoRef = useRef(null);
   // Drag-to-scroll state
   const isDragging = useRef(false);
   const startX = useRef(0);
   const scrollLeft = useRef(0);
+  // New touch interaction tracking
+  const touchStartTime = useRef(0);
+  const touchDistance = useRef(0);
+  const isTouchScrolling = useRef(false);
   // Floating button state
   const [isFloatingButtonVisible, setIsFloatingButtonVisible] = useState(true);
   const [showWhatsAppOptions, setShowWhatsAppOptions] = useState(false);
@@ -143,19 +148,76 @@ const Home = () => {
   };
   // Touch events for mobile
   const handleTouchStart = (e) => {
+    if (e.touches.length !== 1) return; // Only single touch
     isDragging.current = true;
-    startX.current = e.touches[0].pageX - carouselRef.current.offsetLeft;
+    isTouchScrolling.current = false;
+    touchStartTime.current = Date.now();
+    startX.current = e.touches[0].clientX;
     scrollLeft.current = carouselRef.current.scrollLeft;
+    touchDistance.current = 0;
   };
-  const handleTouchEnd = () => {
+  
+  const handleTouchEnd = (e) => {
+    const touchDuration = Date.now() - touchStartTime.current;
     isDragging.current = false;
+    
+    // If touch was short and movement was minimal, treat as a click/tap
+    if (touchDuration < 250 && Math.abs(touchDistance.current) < 15 && !isTouchScrolling.current) {
+      // Find which card was tapped
+      const target = e.target;
+      const card = target.closest('.whats-inside-room-card');
+      if (card) {
+        const allCards = Array.from(carouselRef.current.querySelectorAll('.whats-inside-room-card'));
+        const cardIndex = allCards.indexOf(card);
+        if (cardIndex !== -1) {
+          setSelectedIdx(cardIndex);
+        }
+      }
+    }
   };
+  
   const handleTouchMove = (e) => {
-    if (!isDragging.current) return;
-    const x = e.touches[0].pageX - carouselRef.current.offsetLeft;
-    const walk = (x - startX.current) * 1.2;
-    carouselRef.current.scrollLeft = scrollLeft.current - walk;
+    if (!isDragging.current || e.touches.length !== 1) return;
+    const x = e.touches[0].clientX;
+    const diff = x - startX.current;
+    touchDistance.current = diff;
+    
+    // If movement is significant, mark as scrolling to prevent click
+    if (Math.abs(diff) > 5) {
+      isTouchScrolling.current = true;
+      // Calculate new scroll position - using negative diff for natural scrolling direction
+      const newScrollPosition = scrollLeft.current - diff;
+      
+      // Make sure we don't scroll beyond boundaries
+      const maxScroll = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
+      
+      // Apply scroll with boundary check
+      if (newScrollPosition >= 0 && newScrollPosition <= maxScroll) {
+        carouselRef.current.scrollLeft = newScrollPosition;
+      }
+    }
   };
+
+  // Effect to handle video reload when selected index changes
+  useEffect(() => {
+    // Force video reload when selection changes
+    if (videoRef.current) {
+      videoRef.current.load();
+      videoRef.current.play().catch(e => console.log("Auto-play prevented:", e));
+    }
+    
+    // Scroll the selected card into view on mobile
+    if (carouselRef.current) {
+      const selectedCard = carouselRef.current.children[selectedIdx];
+      if (selectedCard && window.innerWidth <= 768) {
+        selectedCard.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'center'
+        });
+      }
+    }
+  }, [selectedIdx]);
 
   return (
     <div className="home-page">
@@ -409,7 +471,12 @@ const Home = () => {
           <div className="whats-inside-room-carousel-wrapper">
             <button className="carousel-arrow left" onClick={() => {
               const el = carouselRef.current;
-              el.scrollBy({ left: -el.offsetWidth / 1.5, behavior: 'smooth' });
+              // Improved left arrow scrolling
+              const scrollAmount = Math.min(el.clientWidth * 0.8, 300);
+              el.scrollBy({ 
+                left: -scrollAmount, 
+                behavior: 'smooth' 
+              });
             }}>
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
@@ -430,9 +497,16 @@ const Home = () => {
                   key={idx}
                   className={`whats-inside-room-card${selectedIdx === idx ? ' selected' : ''}`}
                   onClick={() => setSelectedIdx(idx)}
-                  style={{ border: selectedIdx === idx ? '2px solid #c75c4a' : undefined }}
+                  style={{ 
+                    border: selectedIdx === idx ? '2px solid #c75c4a' : undefined,
+                    backgroundColor: selectedIdx === idx ? '#fff6f0' : undefined,
+                    transform: selectedIdx === idx ? 'translateY(-5px)' : undefined,
+                    boxShadow: selectedIdx === idx ? '0 8px 16px rgba(0,0,0,0.12)' : undefined
+                  }}
                 >
-                  <div className="whats-inside-room-icon">
+                  <div className="whats-inside-room-icon" style={{ 
+                    backgroundColor: selectedIdx === idx ? 'rgba(199, 92, 74, 0.2)' : 'rgba(199, 92, 74, 0.1)'
+                  }}>
                     <FontAwesomeIcon icon={item.icon} />
                   </div>
                   <div className="whats-inside-room-item-title">{item.title}</div>
@@ -442,29 +516,35 @@ const Home = () => {
             </div>
             <button className="carousel-arrow right" onClick={() => {
               const el = carouselRef.current;
-              el.scrollBy({ left: el.offsetWidth / 1.5, behavior: 'smooth' });
+              // Improved right arrow scrolling
+              const scrollAmount = Math.min(el.clientWidth * 0.8, 300);
+              el.scrollBy({ 
+                left: scrollAmount, 
+                behavior: 'smooth' 
+              });
             }}>
               <FontAwesomeIcon icon={faChevronRight} />
             </button>
           </div>
           <div className="whats-inside-videos">
             <div className="whats-inside-video-row">
-              <div className="whats-inside-video-card big">
+              <div className="whats-inside-video-card big" key={`video-${selectedIdx}`}>
                 <video
-                  key={whatsInsideItems[selectedIdx].video}
                   className="whats-inside-video big"
+                  ref={videoRef}
                   controls
                   autoPlay
                   loop
                   muted
                   poster={null}
+                  key={`video-src-${selectedIdx}`}
                 >
                   <source src={whatsInsideItems[selectedIdx].video} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 <div className="whats-inside-video-label">{whatsInsideItems[selectedIdx].title}</div>
               </div>
-              <div className="whats-inside-video-desc-card big">
+              <div className="whats-inside-video-desc-card big" key={`desc-${selectedIdx}`}>
                 <div className="whats-inside-video-desc-text">
                   {whatsInsideItems[selectedIdx].longDesc}
                 </div>
