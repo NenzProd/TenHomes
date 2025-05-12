@@ -9,13 +9,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(253, 246, 227, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px 0;
+  background-color: #FEF6E1;
+  box-shadow: 0 2px 8px rgba(51,51,51,0.04);
   z-index: 1000;
   transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar.scrolled {
@@ -24,18 +23,25 @@
 }
 
 .navbar-container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 0.8rem 1rem;
 }
 
 /* Logo styling */
 .navbar-logo {
   display: flex;
   align-items: center;
+  font-weight: bold;
+  gap: 0.2rem;
+  color: #CD5E4F;
+  opacity: 1;
+  margin-right: auto;
+  justify-content: flex-start;
 }
 
 .navbar-logo-svg {
@@ -50,13 +56,13 @@
 }
 
 .navbar-logo-icon {
-  font-size: 24px;
+  font-size: 28px;
   color: #c75c4a;
   margin-right: 8px;
 }
 
 .navbar-logo img {
-  height: 70px;
+  height: 85px;
   width: auto;
   margin-right: 10px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -69,7 +75,7 @@
 
 .navbar-logo-text {
   font-family: 'Segoe UI', sans-serif;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
   color: #c75c4a;
 }
@@ -80,27 +86,21 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  gap: 40px;
+  gap: 3.5rem; /* Increased from 2rem for more spacing */
 }
 
 .navbar-links li a {
   color: #333;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease, transform 0.3s ease;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.navbar-links li a:last-child {
-  border-bottom: none;
+  padding: 0.5rem 0;
 }
 
 .navbar-links li a:hover {
   color: #c75c4a;
-  transform: scale(1.05);
 }
 
 .navbar-links li a::after {
@@ -108,7 +108,7 @@
   position: absolute;
   width: 0;
   height: 2px;
-  bottom: -5px;
+  bottom: -2px;
   left: 0;
   background-color: #c75c4a;
   transition: width 0.3s ease;
@@ -128,6 +128,7 @@
 .navbar-contact {
   display: flex;
   align-items: center;
+  margin-left: 1rem;
 }
 
 .navbar-phone {
@@ -135,13 +136,32 @@
   align-items: center;
   color: #333;
   font-weight: 600;
+  font-size: 18px;
   text-decoration: none;
+  gap: 8px;
 }
 
-.navbar-phone i {
-  margin-right: 8px;
+.navbar-phone svg {
+  color: #170e0d;
   font-size: 18px;
-  color: #c75c4a;
+}
+
+/* CTA Button styling from styles.css */
+.cta-btn {
+  background: #CD5E4F;
+  color: #fff;
+  padding: 0.7rem 1.4rem;
+  border-radius: 24px;
+  font-weight: 600;
+  transition: background 0.2s;
+  text-align: center;
+  border: none;
+  font-size: 1rem;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+  background: #698163;
 }
 
 /* Hamburger menu */
@@ -149,16 +169,20 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 24px;
-  height: 18px;
+  width: 28px;
+  height: 22px;
   cursor: pointer;
   z-index: 2000;
-  position: relative;
+  gap: 5px;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .navbar-hamburger span {
   display: block;
-  height: 2px;
+  height: 3px;
   width: 100%;
   background-color: #c75c4a;
   border-radius: 2px;
@@ -205,11 +229,9 @@
     display: none;
     width: 280px;
     height: 100vh;
-    background-color: rgba(253, 246, 227, 0.98);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 80px 30px 30px;
-    gap: 25px;
+    background-color: #FEF6E1;
+    padding: 100px 30px 30px;
+    gap: 30px;
     transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.3s;
     opacity: 0;
     pointer-events: none;
@@ -226,7 +248,7 @@
   }
   
   .navbar-links li a {
-    font-size: 18px;
+    font-size: 20px;
     display: block;
     padding: 10px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -234,20 +256,6 @@
   
   .navbar-links li a:last-child {
     border-bottom: none;
-  }
-  
-  .navbar-hamburger.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-    background-color: #333;
-  }
-  
-  .navbar-hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .navbar-hamburger.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-    background-color: #333;
   }
   
   .navbar-contact {
@@ -270,18 +278,75 @@
   }
 }
 
+/* Tablet Responsive Styles from styles.css */
+@media (min-width: 700px) and (max-width: 1023px) {
+  .navbar-container {
+    padding: 1rem 2rem;
+  }
+  
+  .navbar-logo img {
+    height: 90px;
+  }
+  
+  .navbar-links {
+    gap: 2.5rem; /* Adjusted for tablet view */
+  }
+  
+  .navbar-links li a {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop Responsive Styles from styles.css */
+@media (min-width: 1024px) {
+  .navbar-container {
+    max-width: 1200px;
+    padding: 1.2rem 3rem;
+  }
+  
+  .navbar-links {
+    gap: 3.5rem; /* Maintained larger gap for desktop */
+  }
+  
+  .navbar-logo img {
+    height: 100px;
+  }
+  
+  .navbar-links li a {
+    font-size: 1.15rem;
+  }
+  
+  .cta-btn {
+    padding: 1rem 1.9rem;
+    font-size: 1.1rem;
+  }
+  
+  .navbar-contact {
+    margin-left: 2rem;
+  }
+  
+  .navbar-phone {
+    font-size: 18px;
+    gap: 10px;
+  }
+  
+  .navbar-phone svg {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 576px) {
   .navbar-container {
     padding: 0 20px;
   }
   
   .navbar-logo-svg {
-    width: 32px;
-    height: 32px;
+    width: 38px;
+    height: 38px;
   }
   
   .navbar-logo-text {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 

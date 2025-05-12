@@ -5,7 +5,7 @@ import houseOwnerImg from '../../assets/house owner.jpg';
 import cozyPGImg from '../../assets/cozyPG.webp';
 import ownerMeetingImg from '../../assets/TenHomes-Owner-meet.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoneyBillWave, faClock, faShieldAlt, faUserFriends, faHome, faRupeeSign, faFileContract, faKey, faGem, faChevronLeft, faChevronRight, faCouch, faUtensils, faWifi, faBath, faBook, faBlender, faSnowflake, faBroom, faPhone, faTimes, faComments, faSearch, faUser, faBed, faDoorOpen, faWindowMaximize, faFan, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faMoneyBillWave, faClock, faShieldAlt, faUserFriends, faHome, faRupeeSign, faFileContract, faKey, faGem, faChevronLeft, faChevronRight, faCouch, faUtensils, faWifi, faBath, faBook, faBlender, faSnowflake, faBroom, faPhone, faTimes, faComments, faSearch, faUser, faBed, faDoorOpen, faWindowMaximize, faFan, faCircle, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import matressVideo from '../../assets/Videos/matress.mp4';
 import cupboardVideo from '../../assets/Videos/cupboard.mp4';
@@ -540,19 +540,31 @@ const Home = () => {
           <div className="faq-list">
             {/* Example FAQ items, you can add more or update as needed */}
             <details className="faq-item">
-              <summary>What is included in the rent?</summary>
+              <summary>
+                <span>What is included in the rent?</span>
+                <FontAwesomeIcon icon={faChevronDown} className="faq-dropdown-arrow" />
+              </summary>
               <div className="faq-answer">All basic furnishings, maintenance, and select utilities are included. Please check the property details for specifics.</div>
             </details>
             <details className="faq-item">
-              <summary>How do I list my property?</summary>
+              <summary>
+                <span>How do I list my property?</span>
+                <FontAwesomeIcon icon={faChevronDown} className="faq-dropdown-arrow" />
+              </summary>
               <div className="faq-answer">Click on "List Your House" and fill out the form. Our team will contact you for the next steps.</div>
             </details>
             <details className="faq-item">
-              <summary>Are tenants verified?</summary>
+              <summary>
+                <span>Are tenants verified?</span>
+                <FontAwesomeIcon icon={faChevronDown} className="faq-dropdown-arrow" />
+              </summary>
               <div className="faq-answer">Yes, all tenants undergo thorough background checks and verification before moving in.</div>
             </details>
             <details className="faq-item">
-              <summary>How is rent paid to owners?</summary>
+              <summary>
+                <span>How is rent paid to owners?</span>
+                <FontAwesomeIcon icon={faChevronDown} className="faq-dropdown-arrow" />
+              </summary>
               <div className="faq-answer">Owners receive guaranteed rent directly in their bank account every month, on time.</div>
             </details>
           </div>
