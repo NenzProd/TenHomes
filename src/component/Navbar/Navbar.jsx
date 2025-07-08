@@ -60,7 +60,6 @@ const Navbar = () => {
           <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>About us</NavLink></li>
           <li><NavLink to="/ownersmanual" className={({ isActive }) => isActive ? 'active' : ''}>For Owners</NavLink></li>
           <li><NavLink to="/fortenants" className={({ isActive }) => isActive ? 'active' : ''}>For Tenants</NavLink></li>
-          <li><NavLink to="/pricing" className={({ isActive }) => isActive ? 'active' : ''}>Pricing</NavLink></li>
           <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact us</NavLink></li>
         </ul>
 
