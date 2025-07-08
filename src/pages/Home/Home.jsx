@@ -216,51 +216,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Why Let Your Home as a PG? Section */}
-      <section className="custom-benefits-section" style={{ background: '#FFF8F0', padding: '60px 0' }}>
-        <div className="section-container">
-          <h2 style={{
-            textAlign: 'center',
-            color: '#c75c4a',
-            fontWeight: 800,
-            fontSize: '2.3rem',
-            marginBottom: '2.5rem',
-            letterSpacing: '0.5px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '0.7rem',
-          }}>
-            <span style={{ color: '#c75c4a', fontSize: '2.1rem', verticalAlign: 'middle' }}>
-              <FontAwesomeIcon icon={faKey} />
-            </span>
-            Why Let Your Home as a PG?
-          </h2>
-          <div className="custom-benefits-grid">
-            <div className="custom-benefit-card">
-              <img className="custom-benefit-img" src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=200&q=80" alt="Guaranteed Higher Rent" />
-              <div className="custom-benefit-label">Guaranteed Higher Rent</div>
-            </div>
-            <div className="custom-benefit-card">
-              <img className="custom-benefit-img" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=200&q=80" alt="Zero Management Hassle" />
-              <div className="custom-benefit-label">Zero Management Hassle</div>
-            </div>
-            <div className="custom-benefit-card">
-              <img className="custom-benefit-img" src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=200&q=80" alt="Maintenance Taken Care Of" />
-              <div className="custom-benefit-label">Maintenance Taken Care Of</div>
-            </div>
-            <div className="custom-benefit-card">
-              <img className="custom-benefit-img" src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=200&q=80" alt="Trusted Tenant Verification" />
-              <div className="custom-benefit-label">Trusted Tenant Verification</div>
-            </div>
-            <div className="custom-benefit-card">
-              <img className="custom-benefit-img" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=200&q=80" alt="Hassle-Free Agreement Prep" />
-              <div className="custom-benefit-label">Hassle-Free Agreement Prep</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+     
       <section className="owner-benefits-section">
         <div className="owner-benefits-wrapper">
           <div className="owner-benefits-content">
@@ -343,6 +299,53 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+ {/* Why Let Your Home as a PG? Section */}
+      <section className="custom-benefits-section" style={{ background: '#FFF8F0', padding: '60px 0' }}>
+        <div className="section-container">
+          <h2 style={{
+            textAlign: 'center',
+            color: '#c75c4a',
+            fontWeight: 800,
+            fontSize: '2.3rem',
+            marginBottom: '2.5rem',
+            letterSpacing: '0.5px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '0.7rem',
+          }}>
+            <span style={{ color: '#c75c4a', fontSize: '2.1rem', verticalAlign: 'middle' }}>
+              <FontAwesomeIcon icon={faKey} />
+            </span>
+            Why Let Your Home as a PG?
+          </h2>
+          <div className="custom-benefits-grid">
+            <div className="custom-benefit-card">
+              <img className="custom-benefit-img" src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=200&q=80" alt="Guaranteed Higher Rent" />
+              <div className="custom-benefit-label">Guaranteed Higher Rent</div>
+            </div>
+            <div className="custom-benefit-card">
+              <img className="custom-benefit-img" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=200&q=80" alt="Zero Management Hassle" />
+              <div className="custom-benefit-label">Zero Management Hassle</div>
+            </div>
+            <div className="custom-benefit-card">
+              <img className="custom-benefit-img" src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=200&q=80" alt="Maintenance Taken Care Of" />
+              <div className="custom-benefit-label">Maintenance Taken Care Of</div>
+            </div>
+            <div className="custom-benefit-card">
+              <img className="custom-benefit-img" src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=200&q=80" alt="Trusted Tenant Verification" />
+              <div className="custom-benefit-label">Trusted Tenant Verification</div>
+            </div>
+            <div className="custom-benefit-card">
+              <img className="custom-benefit-img" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=200&q=80" alt="Hassle-Free Agreement Prep" />
+              <div className="custom-benefit-label">Hassle-Free Agreement Prep</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
 
       <section className="owner-benefits-hesitations-section">
         <div className="owner-benefits-ss-redesign">
