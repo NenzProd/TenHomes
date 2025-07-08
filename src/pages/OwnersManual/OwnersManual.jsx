@@ -18,48 +18,47 @@ const OwnersManual = () => {
 
         <div className="how-it-works">
           <h3>How it Works:</h3>
-          <ol>
+          
             <li>
-              <strong>Onboarding</strong>
+              <strong>1. Onboarding</strong>
               <ul>
                 <li>Homes in secure communities are preferred.</li>
                 <li>Individual houses undergo a safety and standards inspection.</li>
               </ul>
             </li>
             <li>
-              <strong>One-Time Agreement</strong>
+              <strong>2. One-Time Agreement</strong>
               <ul>
                 <li>An agreement is signed between the Owner and TenHomes listing terms, rent model, furnishing requirements, fees, etc.</li>
               </ul>
             </li>
             <li>
-              <strong>Furnishing Options</strong>
+              <strong>3. Furnishing Options</strong>
               <ul>
                 <li>Owners can either furnish as per the checklist, or</li>
                 <li>TenHomes can furnish and recover costs monthly (without extra EMI burden).</li>
               </ul>
             </li>
             <li>
-              <strong>Rentals & Payment</strong>
+              <strong>4. Rentals & Payment</strong>
               <ul>
                 <li>TenHomes manages everything — tenant onboarding, rent collection, and maintenance.</li>
               </ul>
             </li>
             <li>
-              <strong>Care & Maintenance</strong>
+              <strong>5. Care & Maintenance</strong>
               <ul>
                 <li>Weekly house cleaning arranged by TenHomes.</li>
                 <li>Tenants handle day-to-day kitchen and room upkeep.</li>
               </ul>
             </li>
             <li>
-              <strong>Transparency and Support</strong>
+              <strong>6. Transparency and Support</strong>
               <ul>
                 <li>Full documentation and tenant tracking.</li>
                 <li>Dedicated relationship manager for any assistance.</li>
               </ul>
             </li>
-          </ol>
         </div>
         
         <div className="cta-section">

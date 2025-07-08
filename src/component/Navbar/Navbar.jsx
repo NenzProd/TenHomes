@@ -58,7 +58,7 @@ const Navbar = () => {
         <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
           <li><NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink></li>
           <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>About us</NavLink></li>
-          <li><NavLink to="/forowners" className={({ isActive }) => isActive ? 'active' : ''}>For Owners</NavLink></li>
+          <li><NavLink to="/ownersmanual" className={({ isActive }) => isActive ? 'active' : ''}>For Owners</NavLink></li>
           <li><NavLink to="/fortenants" className={({ isActive }) => isActive ? 'active' : ''}>For Tenants</NavLink></li>
           <li><NavLink to="/pricing" className={({ isActive }) => isActive ? 'active' : ''}>Pricing</NavLink></li>
           <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact us</NavLink></li>
