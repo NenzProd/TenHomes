@@ -36,3 +36,5 @@ const PaymentPolicy = () => {
     </div>
   );
 };
+
+export default PaymentPolicy;
