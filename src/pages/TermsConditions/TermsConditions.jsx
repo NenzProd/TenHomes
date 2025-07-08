@@ -1,10 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faFileContract, 
-  faGavel, 
-  faArrowLeft 
-} from '@fortawesome/free-solid-svg-icons';
+import { faFileContract, faGavel, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import './TermsConditions.css';
 

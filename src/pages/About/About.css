@@ -1,18 +1,7 @@
-/* 
-* ==============================================
-* ABOUT PAGE STYLES
-* ==============================================
-*/
-
 .about-page {
   background-color: #fdf6e3;
 }
 
-/* 
-* ==============================================
-* PAGE HEADER STYLES
-* ==============================================
-*/
 .page-header {
   background-color: #ffe5d0;
   padding: 60px 40px;
@@ -22,16 +11,11 @@
 .page-header h1 {
   font-family: "Segoe UI", Arial, sans-serif;
   font-weight: 700;
-  font-size: 52px; /* Increased from 48px */
+  font-size: 52px;
   color: #c75c4a;
   margin: 0;
 }
 
-/* 
-* ==============================================
-* ABOUT HERO SECTION
-* ==============================================
-*/
 .about-hero-section {
   background: #fdf6e3;
   border-radius: 22px;

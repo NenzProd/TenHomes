@@ -1,12 +1,24 @@
 :root {
-  --primary-color: #e67e22;
-  --primary-light: #fbeee6;
+  --primary-color: #c75c4a;
+  --primary-color-rgb: 199, 92, 74;
   --primary-dark: #b35400;
+  --primary-light: #fbeee6;
+  --secondary-color: #CD5E4F;
+  --accent-color: #698163;
+  --background-color: #fdf6e3;
+  --background-light: #FEF6E1;
   --success-color: #2e7d32;
   --error-color: #f44336;
   --border-color: #e0e0e0;
+  --text-color: #333;
+  --text-light: #444;
+  --text-muted: #666;
+  --shadow-light: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-medium: 0 4px 15px rgba(0,0,0,0.15);
+  --radius-sm: 4px;
   --radius-md: 8px;
-  --shadow-md: 0 2px 8px rgba(0,0,0,0.08);
+  --radius-lg: 12px;
+  --radius-xl: 22px;
 }
 
 * {
@@ -17,7 +29,7 @@
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background-color: #fdf6e3;
+  background-color: var(--background-color);
 }
 
 .app {
@@ -46,13 +58,13 @@ body {
   font-family: "Segoe UI", Arial, sans-serif;
   font-weight: 700;
   font-size: 48px;
-  color: #c75c4a;
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
 
 .page-container p {
   font-size: 18px;
-  color: #444;
+  color: var(--text-light);
 }
 
 @media (max-width: 768px) {

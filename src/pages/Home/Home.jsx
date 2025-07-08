@@ -1,11 +1,17 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Import Link
+import { Link } from 'react-router-dom';
 import './Home.css';
 import houseOwnerImg from '../../assets/house owner.jpg';
 import cozyPGImg from '../../assets/cozyPG.webp';
 import ownerMeetingImg from '../../assets/TenHomes-Owner-meet.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoneyBillWave, faClock, faShieldAlt, faUserFriends, faHome, faRupeeSign, faFileContract, faKey, faGem, faChevronLeft, faChevronRight, faCouch, faUtensils, faWifi, faBath, faBook, faBlender, faSnowflake, faBroom, faPhone, faTimes, faComments, faSearch, faUser, faBed, faDoorOpen, faWindowMaximize, faFan, faCircle, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { 
+  faMoneyBillWave, faClock, faShieldAlt, faUserFriends, faHome, faRupeeSign, 
+  faFileContract, faKey, faGem, faChevronLeft, faChevronRight, faCouch, faUtensils, 
+  faWifi, faBath, faBook, faBlender, faSnowflake, faBroom, faPhone, faTimes, 
+  faComments, faSearch, faUser, faBed, faDoorOpen, faWindowMaximize, faFan, 
+  faCircle, faChevronDown 
+} from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import matressVideo from '../../assets/Videos/matress.mp4';
 import cupboardVideo from '../../assets/Videos/cupboard.mp4';
@@ -13,51 +19,7 @@ import curtainVideo from '../../assets/Videos/curtain.mp4';
 import fanLightVideo from '../../assets/Videos/fan light.mp4';
 import mirrorVideo from '../../assets/Videos/mirror.mp4';
 import acVideo from '../../assets/Videos/ac.mp4';
-
-/**
- * =====================================================
- * Home Page Component
- * Main landing page for the TenHomes website
- * =====================================================
- */
 const Home = () => {
-  // Add scroll effect for navbar
-  React.useEffect(() => {
-    const handleScroll = () => {
-      const navbar = document.querySelector('.navbar');
-      if (navbar) {
-        if (window.scrollY > 10) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
-      }
-    };
-    
-    // Add menu toggle functionality
-    const handleMenuToggle = () => {
-      const hamburger = document.querySelector('.navbar__hamburger');
-      const links = document.querySelector('.navbar__links');
-      const body = document.body;
-      
-      if (hamburger && links) {
-        hamburger.addEventListener('click', () => {
-          hamburger.classList.toggle('active');
-          links.classList.toggle('mobile-open');
-          body.classList.toggle('menu-open');
-        });
-      }
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    handleMenuToggle();
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  // Online images for benefit cards (one for each card)
   const benefitCardData = [
     {
       img: 'https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=200&q=80',
@@ -221,16 +183,7 @@ const Home = () => {
 
   return (
     <div className="home-page">
-      {/* Sticky Navbar */}
-      <nav className="navbar">
-      </nav>
       
-      {/* 
-        =================================================
-        HERO SECTION
-        Main banner with heading, description and CTAs
-        =================================================
-      */}
       <section className="hero-section">
         <div className="hero-wrapper">
           <div className="hero-content">
@@ -247,13 +200,11 @@ const Home = () => {
               you earn more, we handle everything. Tenants enjoy spacious, home-like 
               stays at affordable prices.
             </p>
-            {/* Call to Action Buttons */}
             <div className="hero-buttons">
               <Link to="/for-owners" className="hero-cta primary">List Your House</Link>
               <button className="hero-cta secondary">Find a PG Home</button>
             </div>
           </div>
-          {/* Hero Images */}
           <div className="hero-images">
             <div className="hero-image">
               <img src={houseOwnerImg} alt="House owner" />
@@ -265,12 +216,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 
-        =================================================
-        OWNER BENEFITS SECTION
-        Highlighting benefits for house owners
-        =================================================
-      */}
       <section className="owner-benefits-section">
         <div className="owner-benefits-wrapper">
           <div className="owner-benefits-content">
@@ -354,11 +299,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 
-        =================================================
-        OWNER BENEFITS SECTION (redesigned)
-        =================================================
-      */}
       <section className="owner-benefits-hesitations-section">
         <div className="owner-benefits-ss-redesign">
           <div className="owner-benefits-ss-header">

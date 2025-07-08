@@ -47,7 +47,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      {/* Enquiry Form Section */}
       <div className="contactus-enquiry-section">
         <h2 className="enquiry-title">Submit Your Enquiry</h2>
         <p className="enquiry-subtitle">Whether you're an Owner or a Tenant, we're just a form away!</p>

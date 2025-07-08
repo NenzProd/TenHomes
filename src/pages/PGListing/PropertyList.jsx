@@ -3,16 +3,8 @@ import properties from "../../properties.json";
 import "./PropertyList.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
-  faMapMarkerAlt, 
-  faUser, 
-  faWifi, 
-  faSnowflake, 
-  faTshirt, 
-  faUtensils, 
-  faBroom, 
-  faCar,
-  faBolt,
-  faStar
+  faMapMarkerAlt, faUser, faWifi, faSnowflake, faTshirt, faUtensils, 
+  faBroom, faCar, faBolt, faStar
 } from "@fortawesome/free-solid-svg-icons";
 import PropertyDetailModal from "./PropertyDetailModal";
 
@@ -49,15 +41,15 @@ const PropertyList = () => {
   return (
     <div className="property-list">
       {properties.map((property) => (
-        <div className="property-card property-card-modern" key={property.id}>
+        <div className="property-card" key={property.id}>
           <img
-            className="property-image property-image-modern"
+            className="property-image"
             src={`/src/assets/${property.image.replace('images/', '')}`}
             alt={property.name}
           />
-          <div className="property-info property-info-modern">
+          <div className="property-info">
             <div className="property-title-row">
-              <h3 className="property-title-modern">
+              <h3 className="property-title">
                 {property.name.length > 22 ? property.name.slice(0, 20) + "..." : property.name}
               </h3>
               <span className="property-rating">

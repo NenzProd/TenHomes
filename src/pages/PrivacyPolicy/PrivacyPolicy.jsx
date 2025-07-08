@@ -7,11 +7,7 @@ const PrivacyPolicy = () => {
   const [activeSection, setActiveSection] = useState('what-we-collect');
   
   const handleSectionClick = (sectionId) => {
-    if (activeSection === sectionId) {
-      setActiveSection(null);
-    } else {
-      setActiveSection(sectionId);
-    }
+    setActiveSection(activeSection === sectionId ? null : sectionId);
   };
   
   return (

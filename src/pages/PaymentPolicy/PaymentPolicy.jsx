@@ -1,10 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faCreditCard, 
-  faLock, 
-  faArrowLeft 
-} from '@fortawesome/free-solid-svg-icons';
+import { faCreditCard, faLock, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import './PaymentPolicy.css';
 
@@ -40,5 +36,3 @@ const PaymentPolicy = () => {
     </div>
   );
 };
-
-export default PaymentPolicy;

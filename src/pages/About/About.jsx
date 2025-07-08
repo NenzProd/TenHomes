@@ -2,16 +2,9 @@ import React from 'react';
 import './About.css';
 import heroImg from '../../assets/TenHomes-Owner-meet.png';
 
-/**
- * =====================================================
- * About Page Component
- * Provides information about TenHomes company
- * =====================================================
- */
 const About = () => {
   return (
     <div className="about-page">
-      {/* HERO SECTION */}
       <section className="about-hero-section">
         <div className="about-hero-wrapper">
           <div className="about-hero-content">
@@ -28,7 +21,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* PARTNERSHIP MODELS SECTION */}
       <section className="partnership-models-section">
         <h2 className="partnership-title">Our Homeowner Partnership Models</h2>
         <div className="partnership-underline"></div>
