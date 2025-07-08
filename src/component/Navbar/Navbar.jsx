@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
@@ -56,12 +56,12 @@ const Navbar = () => {
         </div>
 
         <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About us</Link></li>
-          <li><Link to="/forowners">For Owners</Link></li>
-          <li><Link to="/fortenants">For Tenants</Link></li>
-          <li><Link to="/pricing">Pricing</Link></li>
-          <li><Link to="/contact">Contact us</Link></li>
+          <li><NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink></li>
+          <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>About us</NavLink></li>
+          <li><NavLink to="/forowners" className={({ isActive }) => isActive ? 'active' : ''}>For Owners</NavLink></li>
+          <li><NavLink to="/fortenants" className={({ isActive }) => isActive ? 'active' : ''}>For Tenants</NavLink></li>
+          <li><NavLink to="/pricing" className={({ isActive }) => isActive ? 'active' : ''}>Pricing</NavLink></li>
+          <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact us</NavLink></li>
         </ul>
 
         <div className={`navbar-contact ${isMenuOpen ? 'active' : ''}`}>
