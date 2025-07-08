@@ -12,9 +12,15 @@ const OwnersManual = () => {
   return (
     <div className="page-container owners-manual">
       <div className="owners-manual-content">
-        <h1>📄 Owners Manual</h1>
-        <h2>✅ Unlock Passive Income, Stress-Free!</h2>
-        <p className="tagline">Partnering with TenHomes — A Smarter Way to Lease!</p>
+        <h1 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', color: '#4CAF50', fontWeight: 700, fontSize: '2.5rem' }}>
+          <span role="img" aria-label="document">📄</span> Owners Manual
+        </h1>
+        <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', color: '#2196F3', fontWeight: 700, fontSize: '2rem', marginTop: '1rem' }}>
+          <span role="img" aria-label="check">✅</span> Unlock Passive Income, Stress-Free!
+        </h2>
+        <p className="tagline" style={{ textAlign: 'center', marginTop: '1rem', fontSize: '1.2rem', color: '#222' }}>
+          Partnering with TenHomes — A Smarter Way to Lease!
+        </p>
 
         <div className="how-it-works">
           <h3>How it Works:</h3>
