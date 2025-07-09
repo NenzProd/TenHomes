@@ -47,7 +47,6 @@ const Home = () => {
     { icon: faBed, title: 'Bed & Mattress', desc: 'Sleep-ready setup with quality foam mattress.', video: matressVideo, longDesc: "High-quality mattress that provides excellent support for a good night's sleep. Our mattresses are made with premium foam materials for durability and comfort." },
     { icon: faDoorOpen, title: 'Wardrobe', desc: 'Spacious storage for your belongings.', video: cupboardVideo, longDesc: "Spacious built-in wardrobes with multiple storage compartments. Each wardrobe has hanging space, shelves, and drawers to organize all your belongings." },
     { icon: faWindowMaximize, title: 'Curtain', desc: 'Window curtains for privacy and comfort.', video: curtainVideo, longDesc: "Premium blackout curtains provide privacy and light control. The elegant curtains complement the room's decor and help regulate room temperature." },
-    { icon: faFan, title: 'Ceiling Fan & Lights', desc: 'Bright, airy, and well-lit rooms.', video: fanLightVideo, longDesc: "High-quality ceiling fans with integrated lighting fixtures. The fans provide excellent air circulation and can be used alongside AC or as an energy-saving alternative." },
     { icon: faCircle, title: 'Mirror', desc: 'Full-length mirror for daily use.', video: mirrorVideo, longDesc: "Full-length mirrors to help you get ready with confidence. The mirrors are strategically placed to maximize light and create a sense of space." },
     { icon: faSnowflake, title: 'AC', desc: 'Air-conditioned comfort in select rooms.', video: acVideo, longDesc: "Modern air conditioning unit provides comfortable temperature control all year round. Our AC units are energy efficient and come with remote controls for easy temperature adjustment." }
   ];
@@ -540,9 +539,9 @@ const Home = () => {
                   <source src={whatsInsideItems[selectedIdx].video} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-                <div className="whats-inside-video-label">{whatsInsideItems[selectedIdx].title}</div>
               </div>
               <div className="whats-inside-video-desc-card big" key={`desc-${selectedIdx}`}>
+                <div className="whats-inside-video-desc-title">{whatsInsideItems[selectedIdx].title}</div>
                 <div className="whats-inside-video-desc-text">
                   {whatsInsideItems[selectedIdx].longDesc}
                 </div>
@@ -560,7 +559,7 @@ const Home = () => {
         <div className="extras-container">
           <h2 className="extras-title">Extras That Make Life Easier</h2>
           <p className="extras-subtitle">All the little things that make your stay truly comfortable and hassle-free.</p>
-          <div className="extras-grid">
+          <div className="extras-horizontal-scroll">
             {extrasItems.map((item, idx) => (
               <div className="extras-card" key={idx}>
                 <div className="extras-icon">
