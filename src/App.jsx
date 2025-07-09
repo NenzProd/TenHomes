@@ -28,7 +28,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/for-owners" element={<ForOwners />} />
             <Route path="/ownersmanual" element={<OwnersManual />} />
-            <Route path="/tenants-manual" element={<TenantsManual />} />
+            <Route path="/tenantsmanual" element={<TenantsManual />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/for-tenants" element={<div className="page-container"><h1>For Tenants Page</h1><p>Coming soon</p></div>} />
             <Route path="/pricing" element={<div className="page-container"><h1>Pricing Page</h1><p>Coming soon</p></div>} />

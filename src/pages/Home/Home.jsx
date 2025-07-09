@@ -300,89 +300,93 @@ const Home = () => {
         </div>
       </section>
 
- {/* Why Let Your Home as a PG? Section */}
-      <section className="custom-benefits-section" style={{ background: '#FFF8F0', padding: '60px 0' }}>
+      {/* Merged Section: Why Let Your Home as a PG with TenHomes */}
+      <section className="why-pg-with-tenhomes-section" style={{ background: '#FFF8F0', padding: '80px 0' }}>
         <div className="section-container">
-          <h2 style={{
-            textAlign: 'center',
-            color: '#c75c4a',
-            fontWeight: 800,
-            fontSize: '2.3rem',
-            marginBottom: '2.5rem',
-            letterSpacing: '0.5px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '0.7rem',
-          }}>
-            <span style={{ color: '#c75c4a', fontSize: '2.1rem', verticalAlign: 'middle' }}>
-              <FontAwesomeIcon icon={faKey} />
-            </span>
-            Why Let Your Home as a PG?
-          </h2>
-          <div className="custom-benefits-grid">
-            <div className="custom-benefit-card">
-              <img className="custom-benefit-img" src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=200&q=80" alt="Guaranteed Higher Rent" />
-              <div className="custom-benefit-label">Guaranteed Higher Rent</div>
+          <div className="why-pg-layout">
+            {/* Left Column - Heading and subtitle only */}
+            <div className="why-pg-left">
+              <h2 className="why-pg-main-title">
+                <FontAwesomeIcon icon={faKey} className="why-pg-icon" />
+                Why Let Your Home as a PG with TenHomes?
+              </h2>
+              <p className="why-pg-subtitle">Earn more. Worry less. We handle everything.</p>
             </div>
-            <div className="custom-benefit-card">
-              <img className="custom-benefit-img" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=200&q=80" alt="Zero Management Hassle" />
-              <div className="custom-benefit-label">Zero Management Hassle</div>
-            </div>
-            <div className="custom-benefit-card">
-              <img className="custom-benefit-img" src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=200&q=80" alt="Maintenance Taken Care Of" />
-              <div className="custom-benefit-label">Maintenance Taken Care Of</div>
-            </div>
-            <div className="custom-benefit-card">
-              <img className="custom-benefit-img" src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=200&q=80" alt="Trusted Tenant Verification" />
-              <div className="custom-benefit-label">Trusted Tenant Verification</div>
-            </div>
-            <div className="custom-benefit-card">
-              <img className="custom-benefit-img" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=200&q=80" alt="Hassle-Free Agreement Prep" />
-              <div className="custom-benefit-label">Hassle-Free Agreement Prep</div>
-            </div>
-          </div>
-        </div>
-      </section>
 
+            {/* Right Column - Benefits Cards */}
+            <div className="why-pg-right">
+              <div className="why-pg-benefits-grid">
+                <div className="why-pg-benefit-item">
+                  <div className="why-pg-benefit-icon">
+                    <FontAwesomeIcon icon={faMoneyBillWave} />
+                  </div>
+                  <div className="why-pg-benefit-content">
+                    <h4>Guaranteed Higher Rent</h4>
+                    <p>Earn up to 2× compared to regular family tenants.</p>
+                  </div>
+                </div>
+                
+                <div className="why-pg-benefit-item">
+                  <div className="why-pg-benefit-icon">
+                    <FontAwesomeIcon icon={faShieldAlt} />
+                  </div>
+                  <div className="why-pg-benefit-content">
+                    <h4>Zero Management Hassle</h4>
+                    <p>We handle everything from onboarding to rent collection.</p>
+                  </div>
+                </div>
 
+                <div className="why-pg-benefit-item">
+                  <div className="why-pg-benefit-icon">
+                    <FontAwesomeIcon icon={faBroom} />
+                  </div>
+                  <div className="why-pg-benefit-content">
+                    <h4>Maintenance Included</h4>
+                    <p>Regular cleaning & upkeep handled by our trusted team.</p>
+                  </div>
+                </div>
 
-      <section className="owner-benefits-hesitations-section">
-        <div className="owner-benefits-ss-redesign">
-          <div className="owner-benefits-ss-header">
-            <span className="owner-benefits-ss-diamond">
-              <FontAwesomeIcon icon={faGem} />
-            </span>
-            <span className="owner-benefits-ss-title">Owner Benefits with TenHomes</span>
-          </div>
-          <div className="owner-benefits-ss-cards">
-            <div className="owner-benefits-ss-card">
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Verified tenants only" className="owner-benefits-ss-img" />
-              <div className="owner-benefits-ss-label">Verified tenants only</div>
+                <div className="why-pg-benefit-item">
+                  <div className="why-pg-benefit-icon">
+                    <FontAwesomeIcon icon={faUserFriends} />
+                  </div>
+                  <div className="why-pg-benefit-content">
+                    <h4>Verified Tenants Only</h4>
+                    <p>Every tenant goes through ID + background checks.</p>
+                  </div>
+                </div>
+
+                <div className="why-pg-benefit-item">
+                  <div className="why-pg-benefit-icon">
+                    <FontAwesomeIcon icon={faFileContract} />
+                  </div>
+                  <div className="why-pg-benefit-content">
+                    <h4>Hassle-Free Agreement</h4>
+                    <p>We prepare a clear agreement covering all terms.</p>
+                  </div>
+                </div>
+
+                <div className="why-pg-benefit-item">
+                  <div className="why-pg-benefit-icon">
+                    <FontAwesomeIcon icon={faClock} />
+                  </div>
+                  <div className="why-pg-benefit-content">
+                    <h4>Timely Payments</h4>
+                    <p>Get your rent between 25th–30th, every month without delay.</p>
+                  </div>
+                </div>
+
+                <div className="why-pg-benefit-item">
+                  <div className="why-pg-benefit-icon">
+                    <FontAwesomeIcon icon={faShieldAlt} />
+                  </div>
+                  <div className="why-pg-benefit-content">
+                    <h4>Compliance Ready</h4>
+                    <p>We manage documents, ID proofs & legal formalities.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="owner-benefits-ss-card">
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Full property management & maintenance" className="owner-benefits-ss-img" />
-              <div className="owner-benefits-ss-label">Full property management & maintenance</div>
-            </div>
-            <div className="owner-benefits-ss-card">
-              <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="On-time, guaranteed rent" className="owner-benefits-ss-img" />
-              <div className="owner-benefits-ss-label">On-time, guaranteed rent</div>
-            </div>
-            <div className="owner-benefits-ss-card">
-              <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="All paperwork & compliance handled" className="owner-benefits-ss-img" />
-              <div className="owner-benefits-ss-label">All paperwork & compliance handled</div>
-            </div>
-          </div>
-          <div className="owner-benefits-ss-desc-block">
-            <div className="owner-benefits-ss-desc-title">
-              Curious how we make it so effortless?
-            </div>
-            <div className="owner-benefits-ss-desc-text">
-              Discover how TenHomes transforms your under-utilised space into a profitable, worry-free PG business—without compromising on safety or peace of mind.
-            </div>
-            <Link to="/for-owners" className="owner-benefits-ss-cta-btn">
-              Get Started & Unlock Your Home's True Potential
-            </Link>
           </div>
         </div>
       </section>
@@ -394,54 +398,60 @@ const Home = () => {
       */}
       <section className="how-it-works-section">
         <div className="how-it-works-container">
-          <h2 className="how-it-works-title">How It Works</h2>
-          <div className="how-it-works-subtitle">See how TenHomes makes it easy for both Tenants & Owners</div>
-          <div className="how-it-works-grid">            {/* For Tenants */}
-            <div className="how-it-works-col">              <div className="how-it-works-col-logo-container tenants">
+          <div className="how-it-works-grid">
+            {/* For Tenants */}
+            <div className="how-it-works-col">
+              <div className="how-it-works-col-logo-container tenants">
                 <div className="how-it-works-col-logo">
                   <FontAwesomeIcon icon={faUserFriends} />
                 </div>
                 <div className="how-it-works-col-title tenants">For Tenants</div>
               </div>
-              <div className="how-it-works-step-card">
-                <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Find Your Home" className="how-it-works-img" />
-                <div className="how-it-works-step-title">Find Your Home</div>
+              <div className="how-it-works-step-card modern">
+                <div className="how-it-works-step-dot"></div>
+                <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Find Your Home" className="how-it-works-img" />
+                <div className="how-it-works-step-title highlight">Find Your Home</div>
                 <div className="how-it-works-step-desc">Browse our listings or contact us with your location and budget requirements.</div>
               </div>
-              <div className="how-it-works-step-card">
-                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Visit & Book" className="how-it-works-img" />
-                <div className="how-it-works-step-title">Visit & Book</div>
+              <div className="how-it-works-step-card modern">
+                <div className="how-it-works-step-dot"></div>
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="Visit & Book" className="how-it-works-img" />
+                <div className="how-it-works-step-title highlight">Visit & Book</div>
                 <div className="how-it-works-step-desc">Visit shortlisted properties & complete simple booking formalities without hassle.</div>
               </div>
-              <div className="how-it-works-step-card">
+              <div className="how-it-works-step-card modern">
+                <div className="how-it-works-step-dot"></div>
                 <img src="https://media.istockphoto.com/id/1413463118/photo/university-students-moving-into-campus-accommodation.jpg?s=612x612&w=0&k=20&c=4gCjjcSRUij9glZU5hYlSYd6N4jV30i7l88Wb95opq8=" alt="Move in & Enjoy" className="how-it-works-img" />
-                <div className="how-it-works-step-title">Move in & Enjoy</div>
+                <div className="how-it-works-step-title highlight">Move in & Enjoy</div>
                 <div className="how-it-works-step-desc">Move into your spacious, fully-managed, home-like PG with all amenities ready.</div>
               </div>
-              <button className="how-it-works-btn tenants">Find Your PG Home</button>
-            </div>            {/* For Owners */}
-            <div className="how-it-works-col">              <div className="how-it-works-col-logo-container owners">
+            </div>
+            {/* For Owners */}
+            <div className="how-it-works-col">
+              <div className="how-it-works-col-logo-container owners">
                 <div className="how-it-works-col-logo">
                   <FontAwesomeIcon icon={faUser} />
                 </div>
                 <div className="how-it-works-col-title owners">For Owners</div>
               </div>
-              <div className="how-it-works-step-card">
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="List Your Property" className="how-it-works-img" />
-                <div className="how-it-works-step-title">List Your Property</div>
+              <div className="how-it-works-step-card modern">
+                <div className="how-it-works-step-dot"></div>
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="List Your Property" className="how-it-works-img" />
+                <div className="how-it-works-step-title highlight">List Your Property</div>
                 <div className="how-it-works-step-desc">Share your property details and requirements with us online or by phone.</div>
               </div>
-              <div className="how-it-works-step-card">
-                <img src="https://images.unsplash.com/photo-1629904853716-f0bc54eea481?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="We Inspect & Setup" className="how-it-works-img" />
-                <div className="how-it-works-step-title">We Inspect & Setup</div>
+              <div className="how-it-works-step-card modern">
+                <div className="how-it-works-step-dot"></div>
+                <img src="https://images.unsplash.com/photo-1629904853716-f0bc54eea481?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80" alt="We Inspect & Setup" className="how-it-works-img" />
+                <div className="how-it-works-step-title highlight">We Inspect & Setup</div>
                 <div className="how-it-works-step-desc">We visit, inspect, and help you set up your home as a PG with all compliance handled.</div>
               </div>
-              <div className="how-it-works-step-card">
+              <div className="how-it-works-step-card modern">
+                <div className="how-it-works-step-dot"></div>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB8-G56v03kL6lmkDsDSzHCkGEEJ8ckiObsw&s" alt="Earn Hassle-Free" className="how-it-works-img" />
-                <div className="how-it-works-step-title">Earn Hassle-Free</div>
+                <div className="how-it-works-step-title highlight">Earn Hassle-Free</div>
                 <div className="how-it-works-step-desc">We fill your rooms, manage tenants, and remit you guaranteed rent on-time—every month.</div>
               </div>
-              <Link to="/for-owners" className="how-it-works-btn owners">List Your House</Link>
             </div>
           </div>
         </div>
