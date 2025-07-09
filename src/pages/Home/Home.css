@@ -934,21 +934,22 @@
   font-family: "Segoe UI", Arial, sans-serif;
 }
 .extras-card {
+  min-width: 320px;
+  max-width: 380px;
+  flex: 0 0 auto;
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
-  padding: 28px 18px 18px 18px;
+  padding: 32px 28px 24px 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow 0.2s, transform 0.2s;
-  min-height: 320px;
+  transition: box-shadow 0.2s;
+  min-height: 340px;
   position: relative;
+  white-space: normal;
 }
-.extras-card:hover {
-  box-shadow: 0 8px 24px 0 rgba(0,0,0,0.13);
-  transform: translateY(-5px) scale(1.03);
-}
+
 .extras-icon {
   font-size: 2.6rem;
   color: #c75c4a;
@@ -1000,14 +1001,29 @@
   display: block;
 }
 @media (max-width: 700px) {
+  .extras-horizontal-scroll {
+    gap: 12px;
+    padding-bottom: 10px;
+    scroll-padding-left: 4vw;
+  }
+  .extras-card {
+    min-width: 70vw;
+    max-width: 70vw;
+    padding: 22px 4vw 18px 4vw;
+  }
+}
+@media (max-width: 600px) {
+  .extras-card {
+    /* Keep 70vw for mobile consistency, but adjust other properties */
+    min-width: 70vw;
+    max-width: 70vw;
+    min-height: 220px;
+    padding: 18px 8px 12px 8px;
+  }
   .extras-card-img {
     max-width: 100%;
     height: 190px;
     border-radius: 7px;
-  }
-  .extras-card {
-    min-height: 220px;
-    padding: 18px 8px 12px 8px;
   }
   .extras-icon {
     font-size: 2rem;
@@ -1658,51 +1674,25 @@
   overflow-x: auto;
   gap: 24px;
   padding-bottom: 16px;
-  scrollbar-width: thin;
-  scrollbar-color: #c75c4a #f5f5f5;
-  -webkit-overflow-scrolling: touch; /* Enable momentum scroll on iOS */
   width: 100%;
   max-width: 100vw;
-  touch-action: pan-x; /* Allow horizontal swipe */
-  scroll-behavior: smooth; /* Smooth scroll for snap/arrow keys */
-  scrollbar-gutter: stable both-edges;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
   margin-left: 0 !important;
   padding-left: 0 !important;
+  scrollbar-width: auto; /* Always show scrollbar in Firefox */
+  -ms-overflow-style: auto; /* Always show scrollbar in IE/Edge */
+  /* Enable smooth scrolling and touch responsiveness */
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  outline: none;
 }
 
-.extras-horizontal-scroll > * {
-  scroll-snap-align: start;
+.extras-horizontal-scroll::-webkit-scrollbar {
+  height: 10px;
+  background: #f5f5f5;
+  display: block; /* Always show scrollbar in Webkit browsers */
 }
-
-.extras-card {
-  min-width: 260px;
-  max-width: 320px;
-  flex: 0 0 auto;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
-  padding: 28px 18px 18px 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: box-shadow 0.2s, transform 0.2s;
-  min-height: 320px;
-  position: relative;
-  /* Prevent shrinking and allow horizontal scroll */
-  white-space: normal;
-}
-
-@media (max-width: 700px) {
-  .extras-horizontal-scroll {
-    gap: 12px;
-    padding-bottom: 10px;
-  }
-  .extras-card {
-    min-width: 85vw;
-    max-width: 90vw;
-    padding: 18px 4vw 14px 4vw;
-  }
+.extras-horizontal-scroll::-webkit-scrollbar-thumb {
+  background: #e0b7a6;
+  border-radius: 6px;
 }
 

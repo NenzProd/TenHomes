@@ -574,10 +574,6 @@ const Home = () => {
             tabIndex={0}
             role="region"
             aria-label="Extras that make your life better"
-            style={{ outline: 'none' }}
-            onTouchStart={() => {}}
-            onTouchMove={() => {}}
-            onTouchEnd={() => {}}
           >
             {extrasItems.map((item, idx) => (
               <div className="extras-card" key={idx}>
