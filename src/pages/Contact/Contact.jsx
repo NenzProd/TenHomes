@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faPhone, faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faInstagram, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Contact = () => {
@@ -16,22 +16,14 @@ const Contact = () => {
         </div>
       </div>
       <div className="contactus-cards-wrapper">
-        <div className="contactus-card">
+        {/* <div className="contactus-card">
           <FontAwesomeIcon icon={faMapMarkerAlt} className="contactus-icon" />
           <h2>Our Location</h2>
           <div className="contactus-card-desc">
             Jeevan Bhima Nagar,<br />
-            Anna Nagar West Extension,<br />
             Chennai, India.
           </div>
-        </div>
-        <div className="contactus-card">
-          <FontAwesomeIcon icon={faPhone} className="contactus-icon" />
-          <h2>Call Us</h2>
-          <div className="contactus-card-desc">
-            Phone: <a href="tel:+919840167444">+91-9840167444</a>
-          </div>
-        </div>
+        </div> */}
         <div className="contactus-card">
           <FontAwesomeIcon icon={faEnvelope} className="contactus-icon" />
           <h2>Email Us</h2>
@@ -131,39 +123,6 @@ const Contact = () => {
             <button type="submit" className="enquiry-submit-btn tenant-btn">Find Me a Home <span style={{marginLeft: 6}}>&#8594;</span></button>
           </form>
         )}
-      </div>
-      {/* Social Media Section */}
-      <div className="contactus-social-section">
-        <h2 className="social-title">
-          Connect With Us <span className="social-highlight">on Social Media</span>
-        </h2>
-        <p className="social-subtitle">Follow us for updates, property listings, and PG living tips.</p>
-        <div className="social-cards-wrapper">
-          <a className="social-card facebook" href="https://facebook.com/tenhomes.in" target="_blank" rel="noopener noreferrer">
-            <div className="social-icon-circle">
-              <FontAwesomeIcon icon={faFacebookF} />
-            </div>
-            <div className="social-label">Facebook</div>
-          </a>
-          <a className="social-card instagram" href="https://instagram.com/tenhomes.in" target="_blank" rel="noopener noreferrer">
-            <div className="social-icon-circle">
-              <FontAwesomeIcon icon={faInstagram} />
-            </div>
-            <div className="social-label">Instagram</div>
-          </a>
-          <a className="social-card linkedin" href="https://linkedin.com/company/tenhomes" target="_blank" rel="noopener noreferrer">
-            <div className="social-icon-circle">
-              <FontAwesomeIcon icon={faLinkedinIn} />
-            </div>
-            <div className="social-label">LinkedIn</div>
-          </a>
-          <a className="social-card youtube" href="https://youtube.com/@tenhomes" target="_blank" rel="noopener noreferrer">
-            <div className="social-icon-circle">
-              <FontAwesomeIcon icon={faYoutube} />
-            </div>
-            <div className="social-label">YouTube</div>
-          </a>
-        </div>
       </div>
     </div>
   );

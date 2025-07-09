@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
 import logo from '../../assets/TenHomes-logo-transparentbg-1.png';
 
@@ -64,12 +62,7 @@ const Navbar = () => {
           <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact us</NavLink></li>
         </ul>
 
-        <div className={`navbar-contact ${isMenuOpen ? 'active' : ''}`}>
-          <a href="tel:+9840167444" className="navbar-phone">
-            <FontAwesomeIcon icon={faPhone} />
-            <span>+91 98401 67444</span>
-          </a>
-        </div>
+        {/* Removed navbar-contact (phone icon) from navbar */}
       </div>
       
       <div 

@@ -179,6 +179,15 @@ const Home = () => {
       }
     }
   }, [selectedIdx]);
+  
+  // --- EXTRAS horizontal scroll ref and scroll-to-start fix ---
+  const extrasScrollRef = useRef(null);
+  useEffect(() => {
+    // On mount, scroll to the very left to avoid phantom left offset
+    if (extrasScrollRef.current) {
+      extrasScrollRef.current.scrollLeft = 0;
+    }
+  }, []);
 
   return (
     <div className="home-page">
@@ -559,7 +568,17 @@ const Home = () => {
         <div className="extras-container">
           <h2 className="extras-title">Extras That Make Life Easier</h2>
           <p className="extras-subtitle">All the little things that make your stay truly comfortable and hassle-free.</p>
-          <div className="extras-horizontal-scroll">
+          <div
+            className="extras-horizontal-scroll"
+            ref={extrasScrollRef}
+            tabIndex={0}
+            role="region"
+            aria-label="Extras that make your life better"
+            style={{ outline: 'none' }}
+            onTouchStart={() => {}}
+            onTouchMove={() => {}}
+            onTouchEnd={() => {}}
+          >
             {extrasItems.map((item, idx) => (
               <div className="extras-card" key={idx}>
                 <div className="extras-icon">
