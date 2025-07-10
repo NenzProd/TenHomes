@@ -1671,7 +1671,7 @@
 .extras-horizontal-scroll {
   display: flex;
   flex-direction: row;
-  overflow-x: auto;
+  overflow-x: auto; /* Ensure horizontal scroll */
   gap: 24px;
   padding-bottom: 16px;
   width: 100%;
@@ -1686,13 +1686,101 @@
   outline: none;
 }
 
-.extras-horizontal-scroll::-webkit-scrollbar {
-  height: 10px;
-  background: #f5f5f5;
-  display: block; /* Always show scrollbar in Webkit browsers */
+/* Testimonials Slider Styles */
+.testimonials-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  position: relative;
 }
-.extras-horizontal-scroll::-webkit-scrollbar-thumb {
+.testimonials-slider-arrow {
+  background: #fff;
+  border: 1.5px solid #e75e4e;
+  color: #e75e4e;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin: 0 12px;
+}
+.testimonials-slider-arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.testimonials-slider-content {
+  width: 100%;
+  max-width: 420px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.testimonials-slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+.testimonials-slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
   background: #e0b7a6;
-  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.testimonials-slider-dot.active {
+  background: #e75e4e;
+}
+
+/* Color variables for how-it-works section */
+:root {
+  --tenants-green: #2bb673;
+  --tenants-green-light: #e6f7ef;
+  --owners-orange: #e75e4e;
+  --owners-orange-light: #fff6f0;
+}
+
+/* How it works section - tenants */
+.how-it-works-col-logo-container.tenants .how-it-works-col-logo {
+  background: var(--tenants-green-light);
+  color: var(--tenants-green);
+}
+.how-it-works-col-title.tenants {
+  color: var(--tenants-green);
+}
+.how-it-works-col.tenants .how-it-works-step-card.modern {
+  background: var(--tenants-green-light);
+}
+.how-it-works-col.tenants .how-it-works-step-title {
+  color: var(--tenants-green);
+}
+.how-it-works-col.tenants .how-it-works-step-dot {
+  background: var(--tenants-green);
+  color: #fff;
+}
+
+/* How it works section - owners */
+.how-it-works-col-logo-container.owners .how-it-works-col-logo {
+  background: var(--owners-orange-light);
+  color: var(--owners-orange);
+}
+.how-it-works-col-title.owners {
+  color: var(--owners-orange);
+}
+.how-it-works-col.owners .how-it-works-step-title {
+  color: var(--owners-orange);
+}
+.how-it-works-col.owners .how-it-works-step-dot {
+  background: var(--owners-orange);
+  color: #fff;
 }
 

@@ -189,6 +189,28 @@ const Home = () => {
     }
   }, []);
 
+  const testimonialsData = [
+    {
+      stars: '★★★★★',
+      text: '“TenHomes made renting my house so easy. I get my rent on time and my property is well taken care of!”',
+      client: '— Priya Sharma',
+      location: 'Chennai, Owner',
+    },
+    {
+      stars: '★★★★★',
+      text: '“The PG is super clean, safe, and feels like home. The team is always responsive!”',
+      client: '— Rahul Verma',
+      location: 'Chennai, Tenant',
+    },
+    {
+      stars: '★★★★★',
+      text: '“I never thought PG management could be this hassle-free. Highly recommend TenHomes!”',
+      client: '— Mrs. Lakshmi',
+      location: 'Chennai, Owner',
+    },
+  ];
+  const [testimonialIdx, setTestimonialIdx] = useState(0);
+
   return (
     <div className="home-page">
       
@@ -408,7 +430,7 @@ const Home = () => {
         <div className="how-it-works-container">
           <div className="how-it-works-grid">
             {/* For Tenants */}
-            <div className="how-it-works-col">
+            <div className="how-it-works-col tenants">
               <div className="how-it-works-col-logo-container tenants">
                 <div className="how-it-works-col-logo">
                   <FontAwesomeIcon icon={faUserFriends} />
@@ -435,7 +457,7 @@ const Home = () => {
               </div>
             </div>
             {/* For Owners */}
-            <div className="how-it-works-col">
+            <div className="how-it-works-col owners">
               <div className="how-it-works-col-logo-container owners">
                 <div className="how-it-works-col-logo">
                   <FontAwesomeIcon icon={faUser} />
@@ -597,25 +619,41 @@ const Home = () => {
         <div className="testimonials-container">
           <h2 className="testimonials-title">What Our Clients Say</h2>
           <div className="testimonials-underline"></div>
-          <div className="testimonials-grid">
-            <div className="testimonial-card">
-              <div className="testimonial-stars">★★★★★</div>
-              <div className="testimonial-text">“TenHomes made renting my house so easy. I get my rent on time and my property is well taken care of!”</div>
-              <div className="testimonial-client">— Priya Sharma</div>
-              <div className="testimonial-location">Chennai, Owner</div>
+          <div className="testimonials-slider">
+            <button
+              className="testimonials-slider-arrow"
+              onClick={() => setTestimonialIdx((idx) => Math.max(idx - 1, 0))}
+              disabled={testimonialIdx === 0}
+              aria-label="Previous testimonial"
+            >
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </button>
+            <div className="testimonials-slider-content">
+              <div className="testimonial-card">
+                <div className="testimonial-stars">{testimonialsData[testimonialIdx].stars}</div>
+                <div className="testimonial-text">{testimonialsData[testimonialIdx].text}</div>
+                <div className="testimonial-client">{testimonialsData[testimonialIdx].client}</div>
+                <div className="testimonial-location">{testimonialsData[testimonialIdx].location}</div>
+              </div>
+              <div className="testimonials-slider-dots">
+                {testimonialsData.map((_, idx) => (
+                  <button
+                    key={idx}
+                    className={`testimonials-slider-dot${testimonialIdx === idx ? ' active' : ''}`}
+                    onClick={() => setTestimonialIdx(idx)}
+                    aria-label={`Go to testimonial ${idx + 1}`}
+                  />
+                ))}
+              </div>
             </div>
-            <div className="testimonial-card">
-              <div className="testimonial-stars">★★★★★</div>
-              <div className="testimonial-text">“The PG is super clean, safe, and feels like home. The team is always responsive!”</div>
-              <div className="testimonial-client">— Rahul Verma</div>
-              <div className="testimonial-location">Chennai, Tenant</div>
-            </div>
-            <div className="testimonial-card">
-              <div className="testimonial-stars">★★★★★</div>
-              <div className="testimonial-text">“I never thought PG management could be this hassle-free. Highly recommend TenHomes!”</div>
-              <div className="testimonial-client">— Mrs. Lakshmi</div>
-              <div className="testimonial-location">Chennai, Owner</div>
-            </div>
+            <button
+              className="testimonials-slider-arrow"
+              onClick={() => setTestimonialIdx((idx) => Math.min(idx + 1, testimonialsData.length - 1))}
+              disabled={testimonialIdx === testimonialsData.length - 1}
+              aria-label="Next testimonial"
+            >
+              <FontAwesomeIcon icon={faChevronRight} />
+            </button>
           </div>
         </div>
       </section>
