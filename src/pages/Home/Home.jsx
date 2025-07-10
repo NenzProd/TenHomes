@@ -653,23 +653,39 @@ const Home = () => {
         <div className="extras-container">
           <h2 className="extras-title">Extras That Make Life Easier</h2>
           <p className="extras-subtitle">All the little things that make your stay truly comfortable and hassle-free.</p>
-          <div
-            className="extras-horizontal-scroll"
-            ref={extrasScrollRef}
-            tabIndex={0}
-            role="region"
-            aria-label="Extras that make your life better"
-          >
-            {extrasItems.map((item, idx) => (
-              <div className="extras-card" key={idx}>
-                <div className="extras-icon">
-                  <FontAwesomeIcon icon={item.icon} />
+          <div className="extras-carousel-wrapper" style={{position: 'relative', display: 'flex', alignItems: 'center', maxWidth: '1000px', margin: '0 auto'}}>
+            <button className="carousel-arrow left" onClick={() => {
+              const el = extrasScrollRef.current;
+              const scrollAmount = Math.min(el.clientWidth * 0.8, 300);
+              el.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            }}>
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </button>
+            <div
+              className="extras-horizontal-scroll"
+              ref={extrasScrollRef}
+              tabIndex={0}
+              role="region"
+              aria-label="Extras that make your life better"
+            >
+              {extrasItems.map((item, idx) => (
+                <div className="extras-card" key={idx}>
+                  <div className="extras-icon">
+                    <FontAwesomeIcon icon={item.icon} />
+                  </div>
+                  <div className="extras-card-title">{item.title}</div>
+                  <div className="extras-card-desc">{item.desc}</div>
+                  <img className="extras-card-img" src={item.img} alt={item.title} />
                 </div>
-                <div className="extras-card-title">{item.title}</div>
-                <div className="extras-card-desc">{item.desc}</div>
-                <img className="extras-card-img" src={item.img} alt={item.title} />
-              </div>
-            ))}
+              ))}
+            </div>
+            <button className="carousel-arrow right" onClick={() => {
+              const el = extrasScrollRef.current;
+              const scrollAmount = Math.min(el.clientWidth * 0.8, 300);
+              el.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }}>
+              <FontAwesomeIcon icon={faChevronRight} />
+            </button>
           </div>
         </div>
       </section>
