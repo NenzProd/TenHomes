@@ -211,6 +211,69 @@ const Home = () => {
   ];
   const [testimonialIdx, setTestimonialIdx] = useState(0);
 
+  // Functions for manual navigation
+  const goToPrevTestimonial = () => {
+    setTestimonialIdx((prevIdx) => 
+      prevIdx === 0 ? testimonialsData.length - 1 : prevIdx - 1
+    );
+  };
+
+  const goToNextTestimonial = () => {
+    setTestimonialIdx((prevIdx) => (prevIdx + 1) % testimonialsData.length);
+  };
+
+  // Drag functionality for testimonials
+  const testimonialsScrollRef = useRef(null);
+  const testimonialsDragging = useRef(false);
+  const testimonialsStartX = useRef(0);
+  const testimonialsScrollLeft = useRef(0);
+
+  const handleTestimonialsMouseDown = (e) => {
+    testimonialsDragging.current = true;
+    testimonialsStartX.current = e.pageX - testimonialsScrollRef.current.offsetLeft;
+    testimonialsScrollLeft.current = testimonialsScrollRef.current.scrollLeft;
+  };
+
+  const handleTestimonialsMouseLeave = () => {
+    testimonialsDragging.current = false;
+  };
+
+  const handleTestimonialsMouseUp = () => {
+    testimonialsDragging.current = false;
+  };
+
+  const handleTestimonialsMouseMove = (e) => {
+    if (!testimonialsDragging.current) return;
+    e.preventDefault();
+    const x = e.pageX - testimonialsScrollRef.current.offsetLeft;
+    const walk = (x - testimonialsStartX.current) * 2;
+    testimonialsScrollRef.current.scrollLeft = testimonialsScrollLeft.current - walk;
+  };
+
+  // Touch events for testimonials
+  const handleTestimonialsTouchStart = (e) => {
+    if (e.touches.length !== 1) return;
+    testimonialsDragging.current = true;
+    testimonialsStartX.current = e.touches[0].clientX;
+    testimonialsScrollLeft.current = testimonialsScrollRef.current.scrollLeft;
+  };
+
+  const handleTestimonialsTouchEnd = () => {
+    testimonialsDragging.current = false;
+  };
+
+  const handleTestimonialsTouchMove = (e) => {
+    if (!testimonialsDragging.current || e.touches.length !== 1) return;
+    const x = e.touches[0].clientX;
+    const diff = x - testimonialsStartX.current;
+    const newScrollPosition = testimonialsScrollLeft.current - diff;
+    const maxScroll = testimonialsScrollRef.current.scrollWidth - testimonialsScrollRef.current.clientWidth;
+    
+    if (newScrollPosition >= 0 && newScrollPosition <= maxScroll) {
+      testimonialsScrollRef.current.scrollLeft = newScrollPosition;
+    }
+  };
+
   return (
     <div className="home-page">
       
@@ -619,37 +682,46 @@ const Home = () => {
         <div className="testimonials-container">
           <h2 className="testimonials-title">What Our Clients Say</h2>
           <div className="testimonials-underline"></div>
-          <div className="testimonials-slider">
-            <button
-              className="testimonials-slider-arrow"
-              onClick={() => setTestimonialIdx((idx) => Math.max(idx - 1, 0))}
-              disabled={testimonialIdx === 0}
+          <div className="testimonials-slider-wrapper">
+            <button 
+              className="testimonials-slider-arrow left"
+              onClick={() => {
+                const el = testimonialsScrollRef.current;
+                const scrollAmount = el.clientWidth * 0.8;
+                el.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+              }}
               aria-label="Previous testimonial"
             >
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
-            <div className="testimonials-slider-content">
-              <div className="testimonial-card">
-                <div className="testimonial-stars">{testimonialsData[testimonialIdx].stars}</div>
-                <div className="testimonial-text">{testimonialsData[testimonialIdx].text}</div>
-                <div className="testimonial-client">{testimonialsData[testimonialIdx].client}</div>
-                <div className="testimonial-location">{testimonialsData[testimonialIdx].location}</div>
-              </div>
-              <div className="testimonials-slider-dots">
-                {testimonialsData.map((_, idx) => (
-                  <button
-                    key={idx}
-                    className={`testimonials-slider-dot${testimonialIdx === idx ? ' active' : ''}`}
-                    onClick={() => setTestimonialIdx(idx)}
-                    aria-label={`Go to testimonial ${idx + 1}`}
-                  />
-                ))}
-              </div>
+            <div
+              className="testimonials-horizontal-scroll"
+              ref={testimonialsScrollRef}
+              onMouseDown={handleTestimonialsMouseDown}
+              onMouseLeave={handleTestimonialsMouseLeave}
+              onMouseUp={handleTestimonialsMouseUp}
+              onMouseMove={handleTestimonialsMouseMove}
+              onTouchStart={handleTestimonialsTouchStart}
+              onTouchEnd={handleTestimonialsTouchEnd}
+              onTouchMove={handleTestimonialsTouchMove}
+              style={{ cursor: testimonialsDragging.current ? 'grabbing' : 'grab' }}
+            >
+              {testimonialsData.map((testimonial, idx) => (
+                <div key={idx} className="testimonial-card">
+                  <div className="testimonial-stars">{testimonial.stars}</div>
+                  <div className="testimonial-text">{testimonial.text}</div>
+                  <div className="testimonial-client">{testimonial.client}</div>
+                  <div className="testimonial-location">{testimonial.location}</div>
+                </div>
+              ))}
             </div>
-            <button
-              className="testimonials-slider-arrow"
-              onClick={() => setTestimonialIdx((idx) => Math.min(idx + 1, testimonialsData.length - 1))}
-              disabled={testimonialIdx === testimonialsData.length - 1}
+            <button 
+              className="testimonials-slider-arrow right"
+              onClick={() => {
+                const el = testimonialsScrollRef.current;
+                const scrollAmount = el.clientWidth * 0.8;
+                el.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+              }}
               aria-label="Next testimonial"
             >
               <FontAwesomeIcon icon={faChevronRight} />
