@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@400;600;700&display=swap');
 
 :root {
-  --primary-color: #CD5E4F;
-  --primary-dark: #B54A3B;
-  --primary-light: #F9E7E5;
-  --secondary-color: #2E7D32;
-  --secondary-dark: #1B5E20;
-  --secondary-light: #E8F5E9;
-  --accent-color: #1976D2;
+  --primary-color: #FF9800; /* Orange */
+  --primary-dark: #F57C00;
+  --primary-light: #FFE0B2;
+  --secondary-color: #1976D2; /* Blue */
+  --secondary-dark: #0D47A1;
+  --secondary-light: #E3F2FD;
+  --accent-color: #1976D2; /* Blue */
   --warning-color: #FF9800;
   --success-color: #2E7D32;
   --error-color: #D32F2F;
@@ -53,7 +53,7 @@
   font-weight: 700;
   font-size: 2.5rem;
   margin-bottom: 15px;
-  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(30deg, #ac6267, #3c71b9);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -111,10 +111,9 @@
 }
 
 .progress-step.active .progress-step-icon {
-  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(30deg, #ac6267 0%, #3c71b9 100%);
   color: white;
-  border-color: transparent;
-  box-shadow: var(--shadow-primary);
+  box-shadow: 0 5px 15px rgba(172,98,103,0.2);
   transform: scale(1.1);
 }
 
@@ -165,7 +164,7 @@
   top: 0;
   left: 0;
   height: 100%;
-  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(30deg, #ac6267 0%, #3c71b9 100%);
   transition: width var(--transition-base);
   width: 0%;
 }
@@ -195,10 +194,10 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(30deg, #ac6267 0%, #3c71b9 100%);
   color: white;
   margin-right: 15px;
-  box-shadow: var(--shadow-primary);
+  box-shadow: 0 5px 15px rgba(172,98,103,0.2);
 }
 
 .step-header h2 {
@@ -619,7 +618,7 @@ textarea.form-control {
 }
 
 .btn-primary {
-  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(30deg, #ac6267 0%, #3c71b9 100%);
   color: white;
 }
 
