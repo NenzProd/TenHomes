@@ -26,7 +26,7 @@ const Footer = () => (
           <li><Link to="/for-owners">For Owners - list your property</Link></li>
           <li><Link to="/pg-listing">For Tenants - Find your home</Link></li>
           <li><Link to="/owners-manual">Owners Manual</Link></li>
-          <li><Link to="/tenants-manual">Tenants Manual</Link></li>
+          <li><Link to="/tenantsmanual">Tenants Manual</Link></li>
           <li><Link to="/terms-conditions">Terms and Conditions</Link></li>
           <li><Link to="/payment-policy">Payment Policy</Link></li>
         </ul>

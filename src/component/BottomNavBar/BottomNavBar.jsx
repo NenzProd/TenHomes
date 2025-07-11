@@ -1,14 +1,13 @@
 import React from 'react';
 import './BottomNavBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUserTie, faBuilding, faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUserTie, faBuilding } from '@fortawesome/free-solid-svg-icons';
 import { useLocation, Link } from 'react-router-dom';
 
 const navItems = [
-  { label: 'Home', icon: faHome, path: '/home' },
-  { label: 'For Owner', icon: faUserTie, path: '/for-owners' },
-  { label: 'For Tenants', icon: faBuilding, path: '/pg-listing' }, // Updated path
-  { label: 'Quick Enquiry', icon: faQuestionCircle, path: '/contact' },
+  { label: 'Home', icon: faHome, path: '/home', activeClass: 'active-home' },
+  { label: 'For Owner', icon: faUserTie, path: '/for-owners', activeClass: 'active-owner' },
+  { label: 'For Tenants', icon: faBuilding, path: '/pg-listing', activeClass: 'active-tenant' },
 ];
 
 const BottomNavBar = () => {
@@ -22,7 +21,7 @@ const BottomNavBar = () => {
           <Link
             key={item.label}
             to={item.path}
-            className={`bottom-nav-item${isActive ? ' active' : ''}`}
+            className={`bottom-nav-item${isActive ? ' active ' + item.activeClass : ''}`}
             aria-label={item.label}
             tabIndex={0}
             style={{ textDecoration: 'none', color: 'inherit' }}

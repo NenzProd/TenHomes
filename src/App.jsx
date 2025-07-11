@@ -13,12 +13,14 @@ import TermsConditions from './pages/TermsConditions/TermsConditions';
 import PaymentPolicy from './pages/PaymentPolicy/PaymentPolicy';
 import PGListing from './pages/PGListing/PGListing';
 import Contact from './pages/Contact/Contact';
+import ScrollToTop from './component/ScrollToTop';
 
 import './App.css';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app">
         <Navbar />
         <main className="main-content">

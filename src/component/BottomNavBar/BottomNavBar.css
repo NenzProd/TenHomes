@@ -32,6 +32,15 @@
 .bottom-nav-item.active {
   color: #c75c4a;
 }
+.bottom-nav-item.active-home {
+  color: #c75c4a !important; /* orangish from logo */
+}
+.bottom-nav-item.active-owner {
+  color: #4a90e2 !important; /* blue */
+}
+.bottom-nav-item.active-tenant {
+  color: #27ae60 !important; /* green */
+}
 .bottom-nav-icon {
   font-size: 22px;
   margin-bottom: 2px;
