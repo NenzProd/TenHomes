@@ -24,9 +24,32 @@ const occupancyLabels = {
   four: "Four",
 };
 
-const PropertyList = () => {
+
+const PropertyList = ({ filters = {} }) => {
   const [selectedProperty, setSelectedProperty] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
+
+  // Parse price from property (number)
+  const getPropertyPrice = (property) => {
+    // Try to get price from property.price or property.priceDisplay
+    if (property.price) return Number(property.price);
+    if (property.priceDisplay) {
+      // Remove non-digits
+      const match = property.priceDisplay.replace(/[^\d]/g, "");
+      return Number(match);
+    }
+    return 0;
+  };
+
+  // Filter by budget if present
+  let filteredProperties = properties;
+  if (filters.price) {
+    const budget = Number(filters.price);
+    filteredProperties = filteredProperties.filter((property) => {
+      const price = getPropertyPrice(property);
+      return price <= budget;
+    });
+  }
 
   const handleViewDetails = (property) => {
     setSelectedProperty(property);
@@ -40,21 +63,23 @@ const PropertyList = () => {
 
   return (
     <div className="property-list">
-      {properties.map((property) => (
-        <div className="property-card" key={property.id}>
+      {filteredProperties.map((property) => (
+        <div className="property-card-modern" key={property.id}>
           <img
-            className="property-image"
+            className="property-image-modern"
             src={`/src/assets/${property.image.replace('images/', '')}`}
             alt={property.name}
           />
-          <div className="property-info">
+          <div className="property-info-modern">
             <div className="property-title-row">
-              <h3 className="property-title">
-                {property.name.length > 22 ? property.name.slice(0, 20) + "..." : property.name}
-              </h3>
+              <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+                <span className="property-title-modern">
+                  {property.name.length > 22 ? property.name.slice(0, 20) + "..." : property.name}
+                </span>
+              </div>
               <span className="property-rating">
                 <FontAwesomeIcon icon={faStar} style={{ color: '#FFA534', marginRight: 2, fontSize: '1.1em' }} />
-                {property.rating}
+                <span style={{ fontWeight: 500, fontSize: '1.05rem', marginLeft: 2 }}>{property.rating}</span>
               </span>
             </div>
             <div className="property-location-row">
@@ -78,15 +103,12 @@ const PropertyList = () => {
               <span className="property-amenities-label">Key Amenities</span>
               <div className="property-amenities-icons">
                 {property.amenities.slice(0, 5).map((amenity) => (
-                  <span className="property-amenity-icon" key={amenity} title={amenity} style={{ color: '#CD5D4E' }}>
+                  <span className="property-amenity-icon" key={amenity} title={amenity}>
                     {amenityIcons[amenity] || amenity}
                   </span>
                 ))}
               </div>
             </div>
-            <button className="property-view-details-btn" onClick={() => handleViewDetails(property)}>
-              View Details
-            </button>
           </div>
         </div>
       ))}

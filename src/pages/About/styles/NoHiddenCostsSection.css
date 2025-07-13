@@ -1,0 +1,117 @@
+.no-hidden-costs-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.no-hidden-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.no-hidden-underline {
+  width: 80px;
+  height: 4px;
+  background: #cd5e4f;
+  border-radius: 2px;
+  margin: 0 auto 20px auto;
+}
+.no-hidden-subtitle {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.no-hidden-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.no-hidden-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 32px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #f0f0f0;
+}
+.no-hidden-icon {
+  flex-shrink: 0;
+}
+.no-hidden-card-content {
+  flex: 1;
+}
+.no-hidden-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.no-hidden-card-desc {
+  color: #5a6c7d;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.no-hidden-message {
+  background: #cd5e4f;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 16px;
+  padding: 24px 32px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+  box-shadow: 0 4px 16px rgba(205, 94, 79, 0.2);
+}
+@media (max-width: 900px) {
+  .no-hidden-costs-section {
+    padding: 60px 16px;
+  }
+  .no-hidden-card {
+    padding: 24px 20px;
+    gap: 20px;
+  }
+  .no-hidden-message {
+    font-size: 1rem;
+    padding: 20px 24px;
+    margin: 0 16px;
+  }
+}
+@media (max-width: 600px) {
+  .no-hidden-costs-section {
+    padding: 40px 16px;
+  }
+  .no-hidden-title {
+    font-size: 2rem;
+  }
+  .no-hidden-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px 16px;
+    gap: 16px;
+  }
+  .no-hidden-card-content {
+    text-align: center;
+  }
+  .no-hidden-message {
+    font-size: 0.95rem;
+    padding: 18px 20px;
+    margin: 0 8px;
+  }
+}

@@ -1,0 +1,155 @@
+.partnership-models-section {
+  background: #fdf6e3;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(205, 94, 79, 0.04);
+  padding: 48px 0 60px 0;
+  margin: 0 auto 48px auto;
+  max-width: 1200px;
+  text-align: center;
+}
+.partnership-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #22314a;
+  margin-bottom: 6px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.partnership-underline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #e75e4e 60%, #fbe2d2 100%);
+  border-radius: 2px;
+  margin: 0 auto 18px auto;
+}
+.partnership-subtitle {
+  color: #888;
+  font-size: 1.08rem;
+  margin-bottom: 38px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.partnership-cards {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.partnership-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px 0 rgba(205, 94, 79, 0.10);
+  width: 340px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 18px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.partnership-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(205, 94, 79, 0.16);
+  transform: translateY(-4px) scale(1.03);
+}
+.partnership-card-img {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+.partnership-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.partnership-badge {
+  position: absolute;
+  left: 18px;
+  bottom: 12px;
+  background: #b75c4a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 6px 18px;
+  box-shadow: 0 2px 8px rgba(199,92,74,0.10);
+  z-index: 2;
+}
+.partnership-card-content {
+  padding: 28px 18px 22px 18px;
+  width: 100%;
+  background: #fff;
+  border-radius: 0 0 20px 20px;
+  position: relative;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.partnership-card-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #22314a;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.partnership-card-desc {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.partnership-card-content::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 70px;
+  height: 70px;
+  background: url('data:image/svg+xml;utf8,<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="60" r="50" fill="%23fbe2d2"/></svg>');
+  opacity: 0.5;
+  z-index: 1;
+}
+@media (max-width: 900px) {
+  .partnership-cards {
+    flex-direction: column;
+    gap: 22px;
+    align-items: center;
+  }
+  .partnership-card {
+    width: 98vw;
+    max-width: 400px;
+  }
+}
+@media (max-width: 600px) {
+  .partnership-models-section {
+    padding: 18px 0 28px 0;
+    border-radius: 10px;
+  }
+  .partnership-title {
+    font-size: 1.2rem;
+  }
+  .partnership-card {
+    width: 98vw;
+    max-width: 98vw;
+    border-radius: 10px;
+  }
+  .partnership-card-img {
+    height: 120px;
+  }
+  .partnership-card-content {
+    padding: 14px 8px 12px 8px;
+    min-height: 90px;
+    border-radius: 0 0 10px 10px;
+  }
+  .partnership-badge {
+    left: 10px;
+    bottom: 6px;
+    font-size: 0.93rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+}
