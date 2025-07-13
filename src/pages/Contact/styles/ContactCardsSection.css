@@ -1,0 +1,51 @@
+.contactus-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 40px;
+  z-index: 2;
+  position: relative;
+}
+.contactus-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 32px 28px 24px 28px;
+  min-width: 240px;
+  max-width: 320px;
+  flex: 1 1 220px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+.contactus-card:hover {
+  box-shadow: 0 4px 24px rgba(200,80,50,0.13);
+}
+.contactus-icon {
+  font-size: 2.5rem;
+  color: #d16a5a;
+  margin-bottom: 16px;
+}
+.contactus-card h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+.contactus-card-desc {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+.contactus-card-desc a {
+  color: #d16a5a;
+  text-decoration: none;
+  word-break: break-all;
+}
+.contactus-card-desc a:hover {
+  text-decoration: underline;
+}
