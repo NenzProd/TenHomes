@@ -1,0 +1,113 @@
+.owner-benefits-section {
+  padding: 5rem 2rem;
+  background-color: #FEF8F0;
+  color: #333;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.owner-benefits-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.owner-benefits-content {
+  flex: 1;
+}
+
+.owner-benefits-content h2 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: rgb(58, 44, 26);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 36px;
+}
+
+.owner-benefits-content h3 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: rgb(58, 44, 26);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 36px;
+}
+
+.owner-benefits-content p {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-bottom: 1.5rem;
+  color: rgb(58, 44, 26);
+  text-align: center;
+  font-style: normal;
+}
+
+.solution-highlight p {
+  color: #8B4513;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 36px;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.solution-highlight .highlight {
+  color: #B36A2D;
+  font-weight: 600;
+}
+
+.benefits-description, .service-description {
+  color: rgb(58, 44, 26);
+  text-align: left !important;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+.owner-benefits-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.owner-benefits-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .owner-benefits-wrapper {
+    flex-direction: column;
+  }
+  
+  .owner-benefits-content {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .owner-benefits-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .owner-benefits-content h3 {
+    font-size: 1.4rem;
+  }
+  
+  .owner-benefits-content p {
+    font-size: 1.1rem;
+  }
+}

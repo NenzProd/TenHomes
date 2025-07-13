@@ -1,0 +1,300 @@
+.whats-inside-room-section {
+  background: #f8fafc;
+  padding: 60px 0 80px 0;
+  overflow-x: hidden;
+}
+
+.whats-inside-room-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow-x: hidden;
+}
+
+.whats-inside-room-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 14px;
+  color: #E75E4E;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.whats-inside-room-subtitle {
+  text-align: center;
+  color: #5a6474;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.whats-inside-room-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+  padding: 28px 18px 22px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  min-width: 220px;
+  max-width: 260px;
+  flex: 0 0 auto;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.whats-inside-room-icon {
+  font-size: 2.5rem;
+  margin-bottom: 18px;
+  color: #c75c4a;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(199, 92, 74, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whats-inside-room-item-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.whats-inside-room-item-desc {
+  font-size: 0.98rem;
+  color: #64748b;
+  text-align: center;
+  line-height: 1.4;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Carousel wrapper for horizontal scroll */
+.whats-inside-room-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.whats-inside-room-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 24px;
+  padding: 16px 0 16px 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.whats-inside-room-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-arrow {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  color: #c75c4a;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.carousel-arrow.left {
+  left: -22px;
+}
+
+.carousel-arrow.right {
+  right: -22px;
+}
+
+.carousel-arrow:hover {
+  background: #fbe2d2;
+  color: #a94432;
+  box-shadow: 0 4px 12px rgba(199, 92, 74, 0.12);
+}
+
+/* Video grid section */
+.whats-inside-videos {
+  margin-top: 70px;
+}
+
+/* Big video and text description cards */
+.whats-inside-video-row {
+  display: flex;
+  gap: 32px;
+  margin: 48px auto 0 auto;
+  max-width: 900px;
+  justify-content: center;
+}
+
+.whats-inside-video-card.big {
+  flex: 1 1 50%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  min-width: 320px;
+  max-width: 420px;
+  padding-bottom: 0;
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: auto;
+}
+
+.whats-inside-video.big {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  background: #000;
+}
+
+.whats-inside-video-desc-card.big {
+  flex: 1 1 50%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 32px;
+  margin: 0;
+}
+
+.whats-inside-video-desc-title {
+  font-size: 1.15rem;
+  padding-top: 70px; 
+  font-weight: 600;
+  color: #e75e4e;
+  margin-bottom: 8px;
+  width: 100%;
+  text-align: left;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.whats-inside-video-desc-text {
+  font-size: 1.08rem;
+  color: #444;
+  line-height: 1.7;
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: left;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .whats-inside-video-row {
+    flex-direction: column;
+    gap: 24px;
+    max-width: 98vw;
+  }
+  
+  .whats-inside-video-card.big,
+  .whats-inside-video-desc-card.big {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    border-radius: 16px;
+    padding: 0 12px;
+    aspect-ratio: 1/1;
+    height: auto;
+  }
+  
+  .whats-inside-video.big {
+    aspect-ratio: 1/1;
+    height: 100%;
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .whats-inside-room-carousel-wrapper {
+    max-width: 98vw;
+  }
+  
+  .whats-inside-room-card {
+    min-width: 190px;
+    max-width: 220px;
+  }
+  
+  .carousel-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+  
+  .whats-inside-videos {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .whats-inside-room-section {
+    padding: 40px 0 50px 0;
+  }
+  
+  .whats-inside-room-title {
+    font-size: 1.6rem;
+  }
+  
+  .whats-inside-room-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  
+  .whats-inside-room-card {
+    padding: 22px 12px 18px 12px;
+    min-width: 170px;
+    max-width: 200px;
+  }
+  
+  .whats-inside-room-icon {
+    font-size: 2rem;
+    margin-bottom: 14px;
+  }
+  
+  .whats-inside-video-row {
+    gap: 14px;
+    margin-top: 24px;
+  }
+  
+  .whats-inside-video-card.big,
+  .whats-inside-video-desc-card.big {
+    padding: 0 4px;
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+  }
+  
+  .whats-inside-video.big {
+    aspect-ratio: 1/1;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .whats-inside-video-desc-card.big {
+    padding: 0 10px;
+  }
+  
+  .whats-inside-video-desc-text {
+    font-size: 0.98rem;
+  }
+}

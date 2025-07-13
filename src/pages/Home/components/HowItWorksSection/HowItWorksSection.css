@@ -1,0 +1,202 @@
+/* CSS variables */
+:root {
+  --tenants-green: #2bb673;
+  --tenants-green-light: #e6f7ef;
+  --owners-orange: #e75e4e;
+  --owners-orange-light: #fff6f0;
+}
+
+.how-it-works-section {
+  background: #fef6e1;
+  padding: 60px 0 60px 0;
+}
+
+.how-it-works-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px 0 rgba(199,92,74,0.08);
+  padding: 48px 24px 40px 24px;
+}
+
+.how-it-works-grid {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.how-it-works-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.how-it-works-col-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.how-it-works-col-logo {
+  font-size: 2rem;
+  color: #6b8e6b;
+}
+
+.how-it-works-col-title.tenants {
+  color: #4b715a;
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.how-it-works-col-title.owners {
+  color: #c75c4a;
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.how-it-works-step-card.modern {
+  background: #fff8e8;
+  border-radius: 20px;
+  box-shadow: 0 2px 16px 0 rgba(199,92,74,0.07);
+  padding: 32px 24px 24px 24px;
+  margin: 0 auto;
+  max-width: 340px;
+  min-width: 260px;
+  min-height: 340px;
+  max-height: 340px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border: 1.5px solid #ffe2d2;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.how-it-works-step-dot {
+  width: 32px;
+  height: 32px;
+  background: #e28a6d;
+  border-radius: 50%;
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid #fff8e8;
+  z-index: 2;
+}
+
+.how-it-works-img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  margin-top: 18px;
+}
+
+.how-it-works-step-title.highlight {
+  color: #c75c4a;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+  margin-top: 2px;
+}
+
+.how-it-works-step-desc {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.highlight {
+  color: rgb(205, 94, 79);
+  font-weight: 700;
+}
+
+/* Color customizations for tenants */
+.how-it-works-col-logo-container.tenants .how-it-works-col-logo {
+  background: var(--tenants-green-light);
+  color: var(--tenants-green);
+}
+
+.how-it-works-col-title.tenants {
+  color: var(--tenants-green);
+}
+
+.how-it-works-col.tenants .how-it-works-step-card.modern {
+  background: var(--tenants-green-light);
+}
+
+.how-it-works-col.tenants .how-it-works-step-title {
+  color: var(--tenants-green);
+}
+
+/* Color customizations for owners */
+.how-it-works-col-logo-container.owners .how-it-works-col-logo {
+  background: var(--owners-orange-light);
+  color: var(--owners-orange);
+}
+
+.how-it-works-col-title.owners {
+  color: var(--owners-orange);
+}
+
+.how-it-works-col.owners .how-it-works-step-card.modern {
+  background: var(--owners-orange-light);
+}
+
+.how-it-works-col.owners .how-it-works-step-title {
+  color: var(--owners-orange);
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .how-it-works-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .how-it-works-col {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .how-it-works-step-card.modern {
+    min-height: 320px;
+    max-height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .how-it-works-section {
+    padding: 30px 0 30px 0;
+  }
+  
+  .how-it-works-step-card.modern {
+    min-height: 260px;
+    max-height: 260px;
+    padding: 22px 10px 18px 10px;
+    max-width: 98vw;
+    min-width: 0;
+  }
+  
+  .how-it-works-img {
+    width: 90px;
+    height: 90px;
+  }
+}

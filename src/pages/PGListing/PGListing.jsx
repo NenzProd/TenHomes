@@ -3,7 +3,7 @@ import "./PGListing.css";
 import PropertyList from "./PropertyList";
 import FilterSidebar from "./FilterSidebar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faFilter } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faFilter, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import mirrorVideo from '../../assets/Videos/mirror.mp4';
 
 const PGListing = () => {
@@ -28,14 +28,26 @@ const PGListing = () => {
   return (
     <div className="pglisting-page">
       
-      <section className="pglisting-hero">
-        <video className="pglisting-hero-video" autoPlay loop muted playsInline>
+
+      <section className="pglisting-hero new-hero-bg">
+        <video className="pglisting-hero-video-bg" autoPlay loop muted playsInline>
           <source src={mirrorVideo} type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
-        <div className="pglisting-hero-overlay">
-          <h1>Find Your Perfect PG</h1>
-          <p>Discover the best Paying Guest accommodations tailored for you.</p>
+        <div className="pglisting-hero-overlay new-hero-overlay">
+          <h1 className="new-hero-title">Find Your Dream PG<br />Here</h1>
+          <div className="new-hero-underline"></div>
+          <p className="new-hero-subtitle">Comfortable, affordable and convenient PG accommodations</p>
+          <form className="new-hero-searchbar" onSubmit={e => e.preventDefault()}>
+            <span className="search-icon">
+              <FontAwesomeIcon icon={faMagnifyingGlass} className="fa-orange" />
+            </span>
+            <input
+              type="text"
+              className="new-hero-search-input"
+              placeholder="Enter location, area or landmark"
+            />
+            <button className="new-hero-search-btn" type="submit">Search<br />Now</button>
+          </form>
         </div>
       </section>
       
